@@ -26,7 +26,7 @@ The JSON version is used by [PubTator](https://www.ncbi.nlm.nih.gov/research/pub
 
 ### bioc2crf
 
-`bioc2crf.php` takes a BioC JSON file and exports it to a data and template file that can be used by a CRF tool (in progress). Annotations are in [IOB format](https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging).
+`bioc2crf.php` takes a BioC JSON file and exports it to a data and template file that can be used by a CRF tool (in progress). Annotations are in [IOB format](https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging)).
 
 
 ### crf2bioc
