@@ -96,7 +96,6 @@ $json = file_get_contents ($filename);
 $obj = json_decode($json);
 
 $output = '';
-$template = '';
 
 $result = null;
 
@@ -110,13 +109,43 @@ foreach ($obj->passages as $passage)
 	
 	$output .= join("\n", $result->features) . "\n\n";
 	
-	//print_r($result);
+	print_r($result);
 	
 
 
 }
 
 file_put_contents($output_filename, $output);
+
+$pattern_count = 0;
+
+foreach ($result->templates as $feature_count => $template_text)
+{
+	$rows = explode("\n", $template_text);
+	
+	foreach ($rows as &$row)
+	{
+		// id of feature is order it appears in list of features
+		$row = str_replace('FID', $feature_count, $row);
+	
+		
+		// id of row is sequential
+		$pattern_hex = strtoupper(sprintf('U%02x', dechex($pattern_count)));
+		$row = str_replace('UCOUNT', $pattern_hex, $row);
+
+		
+	
+		$pattern_count++;
+	}
+	
+	echo join("\n", $rows) . "\n\n";
+
+}
+
+
+
+
+
 //file_put_contents($template_filename, $template);
 
 

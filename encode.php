@@ -64,17 +64,24 @@ function encode($token_list, $token_classification = array())
 {
 	// Typical templates
 
+	// Just presence
 	$template_one = 'UCOUNT:%x[0,FID]';
 
+	// Add before and after
 	$template_1ab = 'UCOUNT:%x[-1,FID]
 UCOUNT:%x[0,FID]
 UCOUNT:%x[1,FID]';
 
+	// Add two places before and after
 	$template_2ab = 'UCOUNT:%x[-2,FID]
 UCOUNT:%x[-1,FID]
 UCOUNT:%x[0,FID]
 UCOUNT:%x[1,FID]
 UCOUNT:%x[2,FID]';
+
+	// Add one place after
+	$template_1a = 'UCOUNT:%x[0,FID]
+UCOUNT:%x[1,FID]';
 
 	$result = new stdclass;
 	$result->features = array();
@@ -223,6 +230,7 @@ UCOUNT:%x[2,FID]';
 		$features[] 			= $num;
 		$result->templates[] 	= $template_2ab;
 	
+		/*
 		// punctuation
 		$punct = 'noPunct';
 		if (preg_match('/^\(/', $word))
@@ -260,6 +268,26 @@ UCOUNT:%x[2,FID]';
 
 		$features[] 			= $punct;
 		$result->templates[] 	= $template_2ab;
+		*/
+		
+		$punctuationProfile = preg_replace('/[\w\s]/u', '', $word);				
+		if ($punctuationProfile != '')
+		{				
+			$features[] 			= $punctuationProfile;
+			$result->templates[] 	= $template_1ab;
+
+			$features[] 			= mb_strlen($punctuationProfile);
+			$result->templates[] 	= $template_1ab;
+		}
+		else
+		{
+			$features[] 			= 'noPunctuation';
+			$result->templates[] 	= $template_1ab;
+
+			$features[] 			= 0;
+			$result->templates[] 	= $template_1ab;
+		}	
+		
 
 		$degree = 'noDegree';
 		if (preg_match('/[°|º]/u', $word))
