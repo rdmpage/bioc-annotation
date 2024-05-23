@@ -112,6 +112,367 @@ function tag_barcode(&$passage)
 	}
 }
 
+//----------------------------------------------------------------------------------------
+/**
+ * @brief Convert degrees, minutes, seconds to a decimal value
+ *
+ * @param degrees Degrees
+ * @param minutes Minutes
+ * @param seconds Seconds
+ * @param hemisphere Hemisphere (optional)
+ *
+ * @result Decimal coordinates
+ */
+function degrees2decimal($degrees, $minutes=0, $seconds=0, $hemisphere='N')
+{
+	$result = $degrees;
+	$result += $minutes/60.0;
+	$result += $seconds/3600.0;
+	
+	//echo "seconds=$seconds|<br/>";
+	
+	if ($hemisphere == 'S')
+	{
+		$result *= -1.0;
+	}
+	if ($hemisphere == 'W')
+	{
+		$result *= -1.0;
+	}
+	// Spanish
+	if ($hemisphere == 'O')
+	{
+		$result *= -1.0;
+	}
+	// Spainish OCR error
+	if ($hemisphere == '0')
+	{
+		$result *= -1.0;
+	}
+	
+	return $result;
+}
+
+//----------------------------------------------------------------------------------------
+function toPoint($matches)
+{
+	$feature = new stdclass;
+	$feature->type = "Feature";
+	$feature->geometry = new stdclass;
+	$feature->geometry->type = "Point";
+	$feature->geometry->coordinates = array();
+			
+	$degrees = $minutes = $seconds = 0;		
+		
+	if (isset($matches['latitude_seconds']))
+	{
+		$seconds = $matches['latitude_seconds'];
+		
+		if ($seconds == '')
+		{
+			$seconds = 0;
+		}
+		
+	}
+	$minutes = $matches['latitude_minutes'];
+	$degrees = $matches['latitude_degrees'];
+	
+	$feature->geometry->coordinates[1] = degrees2decimal($degrees, $minutes, $seconds, $matches['latitude_hemisphere']);
+
+	$degrees = $minutes = $seconds = 0;	
+	
+	if (isset($matches['longitude_seconds']))
+	{
+		$seconds = $matches['longitude_seconds'];
+		
+		if ($seconds == '')
+		{
+			$seconds = 0;
+		}
+	}
+	$minutes = $matches['longitude_minutes'];
+	$degrees = $matches['longitude_degrees'];
+	
+	$feature->geometry->coordinates[0] = degrees2decimal($degrees, $minutes, $seconds, $matches['longitude_hemisphere']);
+	
+	// ensures that JSON export treats coordinates as an array
+	ksort($feature->geometry->coordinates);
+	
+	return $feature;
+}
+
+//----------------------------------------------------------------------------------------
+// tag a date
+function tag_geo(&$passage)
+{
+
+	$DEGREES_SYMBOL 		=  '[˚|°|º]';
+	$MINUTES_SYMBOL			= '(\'|’|\′|\´)';
+	$SECONDS_SYMBOL			= '("|\'\'|’’|”|\′\′|\´\´|″)';
+	
+	$INTEGER				= '\d+';
+	$FLOAT					= '\d+([\.|,]\d+)?';
+	
+	$LATITUDE_DEGREES 		= '[0-9]{1,2}';
+	$LONGITUDE_DEGREES 		= '[0-9]{1,3}';
+	
+	$LATITUDE_HEMISPHERE 	= '[N|S]';
+	$LONGITUDE_HEMISPHERE 	= '[W|E]';
+	
+	$ES_LATITUDE_HEMISPHERE 	= '[N|S]';
+	$ES_LONGITUDE_HEMISPHERE 	= '[O|E]';
+	
+	
+	$flanking_length = 50;
+	
+	$results = array();
+		
+	if (preg_match_all("/
+		(?<latitude_degrees>$LATITUDE_DEGREES)
+		$DEGREES_SYMBOL
+		\s*
+		(?<latitude_minutes>$FLOAT)
+		$MINUTES_SYMBOL?
+		\s*
+		(
+		(?<latitude_seconds>$FLOAT)
+		$SECONDS_SYMBOL
+		)?
+		\s*
+		(?<latitude_hemisphere>$LATITUDE_HEMISPHERE)
+		,?
+		(\s+-)?
+		;?
+		\s*
+		(?<longitude_degrees>$LONGITUDE_DEGREES)
+		$DEGREES_SYMBOL
+		\s*
+		(?<longitude_minutes>$FLOAT)
+		$MINUTES_SYMBOL?
+		\s*
+		(
+		(?<longitude_seconds>$FLOAT)
+		$SECONDS_SYMBOL
+		)?
+		\s*
+		(?<longitude_hemisphere>$LONGITUDE_HEMISPHERE)
+		
+	/xu",  $passage->text, $matches, PREG_SET_ORDER))
+	{
+		$last_pos = 0;
+	
+		foreach ($matches as $match)
+		{
+			$annotation = new stdclass;
+			
+			$annotation->text = $match[0];
+			$annotation->infons = new stdclass;
+			$annotation->infons->type = 'Geo';
+
+			$annotation->locations[] = annotation_location(
+				$passage->text, 
+				$annotation->text, 
+				$last_pos,
+				$passage->offset
+				);
+				
+			$annotation->infons->geojson = toPoint($match);				
+			
+			$passage->annotations[] = $annotation;
+		}	
+	}
+	
+	// 29.6° N, 101.8° E
+	if (preg_match_all("/
+		(?<latitude_degrees>$FLOAT)
+		$DEGREES_SYMBOL
+		\s*
+		(?<latitude_hemisphere>$LATITUDE_HEMISPHERE)
+		,
+		\s+
+		(?<longitude_degrees>$FLOAT)
+		$DEGREES_SYMBOL
+		\s*
+		(?<longitude_hemisphere>$LONGITUDE_HEMISPHERE)		
+	/xu",  $passage->text, $matches, PREG_SET_ORDER))
+	{
+		$last_pos = 0;
+	
+		foreach ($matches as $match)
+		{
+			$annotation = new stdclass;
+			
+			$annotation->text = $match[0];
+			$annotation->infons = new stdclass;
+			$annotation->infons->type = 'Geo';
+
+			$annotation->locations[] = annotation_location(
+				$passage->text, 
+				$annotation->text, 
+				$last_pos,
+				$passage->offset
+				);
+			
+			$annotation->infons->geojson = toPoint($match);
+
+			$passage->annotations[] = $annotation;
+		}	
+	}
+	
+	
+	// N27.21234º, E098.69601º
+	if (preg_match_all("/
+		(?<latitude_hemisphere>$LATITUDE_HEMISPHERE)
+		(?<latitude_degrees>$FLOAT)
+		$DEGREES_SYMBOL
+		,
+		\s+
+		(?<longitude_hemisphere>$LONGITUDE_HEMISPHERE)
+		(?<longitude_degrees>$FLOAT)
+		$DEGREES_SYMBOL		
+	/xu",  $passage->text, $matches, PREG_SET_ORDER))
+	{
+		//print_r($matches);
+		
+		$last_pos = 0;
+		
+		foreach ($matches as $match)
+		{
+			$last_pos = 0;
+	
+			foreach ($matches as $match)
+			{
+				$annotation = new stdclass;
+			
+				$annotation->text = $match[0];
+				$annotation->infons = new stdclass;
+				$annotation->infons->type = 'Geo';
+
+				$annotation->locations[] = annotation_location(
+					$passage->text, 
+					$annotation->text, 
+					$last_pos,
+					$passage->offset
+					);
+
+				$annotation->infons->geojson = toPoint($match);
+			
+				$passage->annotations[] = $annotation;
+			}	
+		}
+	}
+	
+	// N25°59', E98°40'
+	if (preg_match_all("/
+		(?<latitude_hemisphere>$LATITUDE_HEMISPHERE)
+		\s*
+		(?<latitude_degrees>$LATITUDE_DEGREES)
+		$DEGREES_SYMBOL
+		(?<latitude_minutes>$INTEGER)
+		$MINUTES_SYMBOL
+		(
+		(?<latitude_seconds>$FLOAT)
+		$SECONDS_SYMBOL
+		)?		
+		,
+		\s+
+		(?<longitude_hemisphere>$LONGITUDE_HEMISPHERE)
+		\s*
+		(?<longitude_degrees>$LONGITUDE_DEGREES)
+		$DEGREES_SYMBOL		
+		(?<longitude_minutes>$INTEGER)
+		$MINUTES_SYMBOL
+		(
+		(?<longitude_seconds>$FLOAT)
+		$SECONDS_SYMBOL
+		)?		
+	/xu",  $passage->text, $matches, PREG_SET_ORDER))
+	{
+		//print_r($matches);
+		
+		$last_pos = 0;
+		
+		foreach ($matches as $match)
+		{
+			$last_pos = 0;
+	
+			foreach ($matches as $match)
+			{
+				$annotation = new stdclass;
+			
+				$annotation->text = $match[0];
+				$annotation->infons = new stdclass;
+				$annotation->infons->type = 'Geo';
+
+				$annotation->locations[] = annotation_location(
+					$passage->text, 
+					$annotation->text, 
+					$last_pos,
+					$passage->offset
+					);
+			
+				$annotation->infons->geojson = toPoint($match);
+
+				$passage->annotations[] = $annotation;
+			}	
+		}
+	}
+	
+	
+	// Spanish https://doi.org/10.21068/c2018.v19s1a11
+	// 4°19´44”N y 71°43´54.1”O
+	if (preg_match_all("/
+		(?<latitude_degrees>$LATITUDE_DEGREES)
+		$DEGREES_SYMBOL
+		(?<latitude_minutes>$INTEGER)
+		$MINUTES_SYMBOL
+		\s*
+		(
+		(?<latitude_seconds>$FLOAT)
+		$SECONDS_SYMBOL
+		)?
+		\s*
+		(?<latitude_hemisphere>$ES_LATITUDE_HEMISPHERE)		
+		\s*y\s*
+		(?<longitude_degrees>$LONGITUDE_DEGREES)
+		$DEGREES_SYMBOL		
+		(?<longitude_minutes>$INTEGER)
+		$MINUTES_SYMBOL
+		\s*
+		(
+		(?<longitude_seconds>$FLOAT)
+		$SECONDS_SYMBOL
+		)?		
+		\s*
+		(?<longitude_hemisphere>$ES_LONGITUDE_HEMISPHERE)
+	/xu",  $passage->text, $matches, PREG_SET_ORDER))
+	{
+		$last_pos = 0;
+	
+		foreach ($matches as $match)
+		{
+			$annotation = new stdclass;
+			
+			$annotation->text = $match[0];
+			$annotation->infons = new stdclass;
+			$annotation->infons->type = 'Geo';
+
+			$annotation->locations[] = annotation_location(
+				$passage->text, 
+				$annotation->text, 
+				$last_pos,
+				$passage->offset
+				);
+				
+			$annotation->infons->geojson = toPoint($match);
+			
+			$passage->annotations[] = $annotation;
+		}	
+	}	
+	
+	
+}
+
 
 //----------------------------------------------------------------------------------------
 
@@ -140,6 +501,7 @@ foreach ($obj->passages as &$passage)
 	
 	tag_date($passage);
 	tag_barcode($passage);
+	tag_geo($passage);
 }
 
 echo json_encode($obj, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";

@@ -11,6 +11,11 @@ function ref($node, &$passage)
 {
 	global $xpath;
 	
+	foreach($xpath->query('(element-citation|mixed-citation|nlm-citation)', $node) as $n)
+	{
+		$passage->infons->unstructured = $n->textContent;
+	}	
+	
 	foreach($xpath->query('(element-citation|mixed-citation|nlm-citation)/person-group/name', $node) as $n)
 	{
 		$parts = array();
@@ -38,7 +43,7 @@ function ref($node, &$passage)
 	}
 	
 	// PLoS is flatter
-	foreach($xpath->query('(mixed-citation/name', $node) as $n)
+	foreach($xpath->query('mixed-citation/name', $node) as $n)
 	{
 		$parts = array();
 	
@@ -119,33 +124,47 @@ function ref($node, &$passage)
 
 //----------------------------------------------------------------------------------------
 // Recursively traverse DOM and process tags, add passages and annotations as we go
-function dive($dom, $node)
+function dive($dom, $node, $passage = null)
 {	
 	global $count;
 	global $depth;
 	
 	global $doc;
 	
-	echo $doc->title_depth . "\n";
+	//echo $doc->title_depth . "\n";
+	
+	$tag_name = $node->nodeName;
+	
+	// Tags for references can include <title> which gets conflated with section titles.
+	if ($node->parentNode->nodeName == 'mixed-citation')
+	{
+		$tag_name = '';
+	}
 		
-	switch ($node->nodeName)
+	switch ($tag_name)
 	{		
 		case 'sec':
 			$doc->title_depth++;
 			break;
 		
 		case 'label':
+		case 'article-title':
 		case 'title':
 		case 'p':
 		case 'tp:taxon-treatment':
 		case 'ref':
-			$passage = new stdclass;			
-			$passage->text = '';
-			$passage->offset = $count;
-			$passage->infons = new stdclass;
+			if (!$passage)
+			{		
+				$passage = new stdclass;			
+				$passage->text = '';
+				$passage->offset = $count;
+				$passage->infons = new stdclass;
+				$passage->annotations = array();
+			}
 			
 			switch ($node->nodeName)
 			{		
+				case 'article-title':
 				case 'title':
 					$passage->infons->type = "title" . "_" . $doc->title_depth;
 					break;
@@ -163,8 +182,6 @@ function dive($dom, $node)
 					$passage->infons->type = "paragraph";
 					break;
 			}
-			
-			$passage->annotations = array();
 			
 			$doc->passages[] = $passage;
 			
@@ -364,13 +381,14 @@ function dive($dom, $node)
 	$depth--;
 	echo str_pad('', (2 * $depth), ' ');
 	
-	switch ($node->nodeName)
+	switch ($tag_name)
 	{
 		case 'sec':
 			$doc->title_depth--;
 			break;
 	
 		case 'label':
+		case 'article-title':
 		case 'title':
 		case 'p':
 		case 'tp:taxon-treatment':
@@ -428,6 +446,7 @@ $xml = file_get_contents($filename);
 // load XML and XPATH
 $dom= new DOMDocument;
 $dom->preserveWhiteSpace = true; // need this for tp:name to work
+//$dom->preserveWhiteSpace = false;
 $dom->loadXML($xml, LIBXML_NOCDATA); // So we get text wrapped in <![CDATA[ ... ]]>
 $xpath = new DOMXPath($dom);
 
@@ -481,7 +500,7 @@ foreach($xpath->query('//front/article-meta/article-id[@pub-id-type="doi"]') as 
 foreach($xpath->query('//front/article-meta/title-group/article-title') as $node)
 {
     $bioc->title = $node->textContent;    
-    $front_passage->text = $bioc->title;
+    //$front_passage->text = $bioc->title;
 }
 
 // infons (units of information)
@@ -548,6 +567,7 @@ $doc = new stdclass;
 $doc->stack = array();
 $doc->current = null;
 $doc->title_depth = 0;
+$doc->passages = array();
 
 // //body
 // //app-group
@@ -556,8 +576,10 @@ $doc->title_depth = 0;
 
 // Handle the various parts of an article
 
+foreach ($xpath->query('//front/article-meta/title-group/article-title') as $node) {
+    dive($dom, $node, $front_passage);
+}
 
-$doc->passages[] = $front_passage;
 
 foreach ($xpath->query('//front/article-meta/abstract') as $node) {
     dive($dom, $node);
@@ -573,7 +595,7 @@ foreach ($xpath->query('//back') as $node) {
 
 $bioc->passages = $doc->passages;
 
-print_r($bioc);
+//print_r($bioc);
 
 file_put_contents($output_filename, json_encode($bioc, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
 

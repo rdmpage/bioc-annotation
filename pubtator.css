@@ -1,0 +1,37 @@
+/* Pubtator-like */
+
+.Gene {
+	background-color: rgba(128,0,128,0.3);
+	color:rgb(128,0,128);
+	padding:0.2em;
+}
+
+.Disease {
+	background-color: rgba(255,165,0,0.3);
+	color:rgb(255,165,0);
+	padding:0.2em;
+}
+
+.Species {
+	background-color: rgba(0,0,255,0.3);
+	color:rgb(0,0,255);
+	padding:0.2em;
+}
+
+.Chemical {
+	background-color: rgba(165,165,80,0.3);
+	color:rgb(165,165,80);
+	padding:0.2em;
+}
+
+.Mutation {
+	background-color: rgba(0,0,0,0.3);
+	color:rgb(0,0,0);
+	padding:0.2em;
+}
+
+.Celline {
+	background-color: rgba(165,80,80,0.3);
+	color:rgb(165,80,80);
+	padding:0.2em;
+}

@@ -57,9 +57,6 @@ if (!function_exists('mb_str_split'))
 
 
 //----------------------------------------------------------------------------------------
-
-
-
 function encode($token_list, $token_classification = array())
 {
 	// Typical templates
@@ -327,13 +324,7 @@ if (0)
 	$result = encode($tokens);
 	
 	print_r($result);
-	
-
 
 }
 
-
-
-
 ?>
-

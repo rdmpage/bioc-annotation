@@ -39,79 +39,11 @@ h1 {
 	font-size: 2em;
 	line-height: 2em;
 }
-
-.Unknown {
-	background-color: rgba(255,255,0,0.6);
-	color:black;
-	padding:0.2em;
-}
-
-.Specimen {
-	background-color: rgba(255,165,0,0.3);
-	color:rgb(255,165,0);
-	padding:0.2em;
-}
-
-.Date {
-	background-color: rgba(0,0,255,0.5);
-	color:white;
-	padding:0.2em;
-}
-
-.Geo {
-	background-color: rgba(0,255,0,0.3);
-	color:rgb(0,255,0);
-	padding:0.2em;
-}
-
-.Organisation {
-	background-color: rgba(0,0,0,0.5);
-	color:white;
-	padding:0.2em;
-}
-
-
-
-/* Pubtator-like */
-
-.Gene {
-	background-color: rgba(128,0,128,0.3);
-	color:rgb(128,0,128);
-	padding:0.2em;
-
-}
-
-.Disease {
-	background-color: rgba(255,165,0,0.3);
-	color:rgb(255,165,0);
-	padding:0.2em;
-}
-
-.Species {
-	background-color: rgba(0,0,255,0.3);
-	color:rgb(0,0,255);
-	padding:0.2em;
-}
-
-.Chemical {
-	background-color: rgba(165,165,80,0.3);
-	color:rgb(165,165,80);
-	padding:0.2em;
-}
-
-.Mutation {
-	background-color: rgba(0,0,0,0.3);
-	color:rgb(0,0,0);
-	padding:0.2em;
-}
-
-.Celline {
-	background-color: rgba(165,80,80,0.3);
-	color:rgb(165,80,80);
-	padding:0.2em;
-}
-
 </style>
+
+<link rel="stylesheet" href="pubtator.css">
+<link rel="stylesheet" href="extra.css">
+
 </head>
 <body>';
 
@@ -153,6 +85,7 @@ foreach ($obj->passages as $passage)
 	switch ($passage->infons->type)
 	{
 		case 'front':
+		case 'title_0':
 			$html .= '<h1>';
 			break;
 
@@ -160,8 +93,7 @@ foreach ($obj->passages as $passage)
 			$html .= '<h3>';
 			break;
 
-		case 'title':
-		case 'title_0':
+		case 'title':		
 		case 'title_1':
 			$html .= '<h2>';
 			break;
@@ -218,6 +150,7 @@ foreach ($obj->passages as $passage)
 	switch ($passage->infons->type)
 	{
 		case 'front':
+		case 'title_0':			
 			$html .= '</h1>';
 			break;
 
@@ -226,7 +159,6 @@ foreach ($obj->passages as $passage)
 			break;
 
 		case 'title':
-		case 'title_0':
 		case 'title_1':
 			$html .= '</h2>';
 			break;
@@ -247,7 +179,8 @@ foreach ($obj->passages as $passage)
 	
 }
 
-$html .= '</body>';
+$html .= '</body>
+</html>';
 
 file_put_contents($output_filename, $html);
 

@@ -4,7 +4,6 @@
 
 require_once (dirname(__FILE__) . '/encode.php');
 
-
 //----------------------------------------------------------------------------------------
 function passage_to_tokens($passage)
 {
@@ -71,9 +70,7 @@ function passage_to_tokens($passage)
 	}	
 	
 	return $tokens;
-
 }
-
 
 $filename = '';
 if ($argc < 2)
@@ -110,9 +107,6 @@ foreach ($obj->passages as $passage)
 	$output .= join("\n", $result->features) . "\n\n";
 	
 	print_r($result);
-	
-
-
 }
 
 file_put_contents($output_filename, $output);
@@ -132,19 +126,12 @@ foreach ($result->templates as $feature_count => $template_text)
 		// id of row is sequential
 		$pattern_hex = strtoupper(sprintf('U%02x', dechex($pattern_count)));
 		$row = str_replace('UCOUNT', $pattern_hex, $row);
-
-		
 	
 		$pattern_count++;
 	}
 	
 	echo join("\n", $rows) . "\n\n";
-
 }
-
-
-
-
 
 //file_put_contents($template_filename, $template);
 

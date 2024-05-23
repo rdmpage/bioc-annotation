@@ -1,0 +1,324 @@
+<html>
+
+<head>
+	<style>
+	body {
+		font-family:sans-serif;
+		padding:20px;
+	}
+	</style>
+	
+	<script>
+		
+	// https://red-sweater.com/blog/3025/marsedit-live-source-preview	
+	function escapeHTML(theHTML) {
+	  var escapedHTML = theHTML
+	  escapedHTML.replace("&", "&amp;");
+	  escapedHTML.replace("<", "&lt;");
+	  return escapedHTML;
+	}
+
+	function updatePreview() {
+	  var source = document.getElementById("editor").innerText;
+	  document.getElementById("preview").innerText = escapeHTML(source);
+	}
+	
+	// XSLT style sheet to transform training data into HTML with coloured tags
+	var xmlString = `<?xml version="1.0"?>
+<xsl:stylesheet xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	<xsl:output encoding="utf-8" indent="yes" method="html" version="1.0"/>
+	<xsl:template match="/">
+		<html>
+			<head>
+				<!-- colour names from https://www.w3schools.com/colors/colors_names.asp -->
+				<style>
+					li {
+						padding:0.4em;
+					}
+					
+					/* a */
+					
+					.author {
+						background: Gold;
+					}
+										
+					/* b */
+					
+					/* c */
+					
+					.citation-number {
+						background: LightGray;
+					}	
+					
+					.collection-title {
+						background: MediumSpringGreen;
+					}
+									
+					
+					.container-title {
+						background: MediumSpringGreen;
+					}
+					
+					/* d */
+					
+					.date {
+						background: Tomato;
+					}
+
+					.director {
+						background: Tomato;
+					}
+					
+					.doi {
+						background: RoyalBlue;
+					}
+					
+					/* e */
+					
+					.edition {
+						background: GoldenRod;
+					}					
+					
+					.editor {
+						background: GoldenRod;
+					}
+					
+					/* genre */
+					.genre {
+						background: LightGray;
+					}
+					
+					/* i */
+					
+					.isbn {
+						background: RoyalBlue;
+					}
+					
+					/* j */
+					
+					.journal {
+						background: LightSkyBlue;
+					}
+					
+					/* l */
+					
+					.location {
+						background: Wheat;
+					}
+					
+					/* m */
+					
+					.medium {
+						background: Beige;
+					}
+										
+					/* n */
+					
+					.note {
+						background: Beige;
+					}					
+					
+					/* p */
+					
+					.pages {
+						background: Magenta;
+					}
+					
+					.producer {
+						background: Beige;
+					}					
+					
+					.publisher {
+						background: Yellow;
+					}
+					
+					/* s */
+					.source {
+						background: LightGray;
+					}
+					
+					/* t */
+					.title {
+						background: LimeGreen;
+					}
+					
+					.translator {
+						background: Beige;
+					}										
+					
+					/* u */
+					.url {
+						background: Silver;
+					}
+					
+					
+					/* v */
+					.volume {
+						background: Tan;
+					}
+
+					
+					/* new */
+					.mark {
+						background:orange;
+					}
+					
+					
+					
+				</style>
+			</head>
+			<body>
+		
+		
+			<ul>
+				 <xsl:apply-templates select="//passage"/>
+			</ul>
+			
+			</body>
+		</html>
+	</xsl:template>
+	
+	<xsl:template match="mark">
+		<mark>
+			<xsl:value-of select="." />
+		</mark>
+	</xsl:template>	
+	
+	<xsl:template match="passage">
+	<li>
+		<xsl:apply-templates /> 
+	</li>
+	</xsl:template>
+	
+	
+	
+</xsl:stylesheet>
+`;
+
+
+		// https://www.w3schools.com/xml/xsl_client.asp
+
+		var parser = new DOMParser();
+		var xsl = parser.parseFromString(xmlString, "text/xml"); //important to use "text/xml"
+
+		var serializer = new XMLSerializer();
+		var xmlString = serializer.serializeToString(xsl);
+
+		function displayResult() {
+		  var xml = parser.parseFromString(document.getElementById("editor").innerText, "text/xml");
+
+		  xmlString = serializer.serializeToString(xml);
+		  
+		  // document.getElementById("log").value = xmlString;
+
+		  if (document.implementation && document.implementation.createDocument) {
+			xsltProcessor = new XSLTProcessor();
+			xsltProcessor.importStylesheet(xsl);
+			resultDocument = xsltProcessor.transformToFragment(xml, document);
+
+			// clear any content
+			document.getElementById("preview").innerHTML = '';
+			// add HTML view of training data
+			document.getElementById("preview").appendChild(resultDocument);
+
+		  }
+		}
+	
+	</script>
+</head>
+
+<body>
+
+	<h1>Edit training data</h1>
+
+	<h2>Preview</h2>
+	<div id="preview" style="padding:10px;height:300px;overflow-y:auto;"></div>
+
+	<h2>XML Editor</h2>
+	
+	<p>To create training data you add tags to the XML below.
+	
+	If some of the text above disappears, remember to balance your tags! When tagging, 
+	please include any punctuation in the tagged text (such as parentheses, commas, semicolons, etc.) . 
+	Hence  <code>&lt;date&gt;(2000)&lt;/date&gt;</code> <b>not</b> <code>(&lt;date&gt;2000&lt;/date&gt;)</code>.
+	</p>
+	
+	<p>
+	<span class="mark">mark</span>
+	<!--
+	<span class="author">author</span>
+	<span class="date">date</span>
+	<span class="title">title</span>
+	<span class="journal">journal</span>
+	<span class="volume">volume</span>
+	<span class="pages">pages</span>
+	<span class="editor">editor</span>
+	<span class="container-title">container-title</span>
+	<span class="publisher">publisher</span>
+	<span class="location">location</span>
+	<span class="note">note</span>
+	<span class="edition">edition</span>
+	<span class="isbn">isbn</span>
+	<span class="url">url</span>
+	<span class="doi">doi</span>
+	-->	
+	</p>
+
+
+	<pre style="white-space:pre-wrap">
+		<div id="editor" style="color:DarkSlateGrey;padding:20px;height:300px;border:1px solid DarkGrey;overflow-y:auto;" contenteditable="true">
+		</div>
+	</pre>
+
+	<!-- <textarea id="log" rows="10" cols="40" readonly=""></textarea> -->
+
+	<script>
+		/* If we have a URL parameter called 'text' then we have some XML to display,
+		   otherwise create some demo data. 
+		*/
+		
+		
+		const urlParams = new URLSearchParams(window.location.search);
+
+		var text = urlParams.get('text');
+
+		if (text) {
+			text = decodeURIComponent(text);
+		
+		   $.get('api.php?text=' + encodeURIComponent(text) + '&format=xml',
+			function(data){ 
+				var serializer = new XMLSerializer();
+				var xml = serializer.serializeToString(data);
+				document.getElementById("editor").innerText = xml;
+				displayResult();
+			});
+		   
+		} else {
+		
+			// some exmaple data
+			var demo = `<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<passage>N. pinetorum: India. Sikkim, 10–11000 feet., J. D. Hooker 355 (holotype, <mark>K000974204!,</mark> isotype, <mark>AMES 00101020!);</mark> China. Yunnan, upper Kiukiang valley, 2500 m, T.T.Yu 19644 <mark>(PE00027188!).</mark> N. bambusetorum: China, Yunnan, Prope fines Tibeto-Birmanicas inter fluvios Lu-djiang (Salween) et Djiou-djiang (Irrawadi or. sup.), in jugi Tschiangschel, 27°52', lateris orientalis regione (frigide) temperata in bambusetis, 3275–3350 m, Hand.-Mazz.9238 (holorypus, <mark>WU0061594!)</mark></passage>
+<passage>(paratypes). China. Guangxi Zhuang Autonomous Region: Napo County, Baisheng Town, Nongming Village, 1200 m alt., <mark>14 May 2013</mark> (fr.), L. Wu 3706 (BNU! CSFI!); same locality as holotype, <mark>25 Oct 2013</mark> (fl.), L. Wu, C. Du, S.S. Mo 4033 (BNU! CSFI! IBK!); Napo County, Pingmeng Town, Guigan Village, under evergreen broad-leaved forests, 1100 m alt., <mark>7 Jan 2014</mark> (fl.), L. Wu 4173 (BNU! CSFI!); ibid., <mark>10 May 2017</mark> (fr.), L. Wu &amp; Z.J. Wen 5891 (CSFI!).</passage>
+<passage>China. Hainan: San-ya, Bai-cha Mountain, <mark>13 Aug. 1933,</mark> Z. Huang 33693 <mark>(IBSC0078951,</mark> SN); Bao-ting Hisen, Qi-xian Mountain, on mountain slopes under forest, alt. 549 m, <mark>25 Apr. 2020,</mark> Q. L. Wang <mark>BT20200425001</mark> (ATCH, IBSC); alt. 584 m, <mark>28 May 2020,</mark> Q. L. Wang <mark>BT20200528001,</mark> <mark>BT20200528002</mark> (ATCH, IBSC).</passage>
+</data>`;
+
+			document.getElementById("editor").innerText = escapeHTML(demo);
+			//updatePreview();
+
+			displayResult();		
+		}		
+		
+		// Listen for changes to the edited XML
+		document.getElementById("editor").addEventListener("input", function() {
+		  // document.getElementById("log").value += "input event fired\n";    
+		  //    updatePreview();
+		  displayResult();
+		}, false);
+		
+	</script>
+	
+
+</body>
+</html>
+
