@@ -300,8 +300,7 @@ function dive($dom, $node, $passage = null)
 			
 		// external links
 		case 'ext-link':		
-			echo '[' . $count . '] |' . $node->nodeValue . "|\n";
-			
+			//echo '[' . $count . '] |' . $node->nodeValue . "|\n";			
 			
 			$attributes = array();
 			if ($node->hasAttributes()) 
@@ -316,7 +315,7 @@ function dive($dom, $node, $passage = null)
 			
 			$type = 'Unknown';
 			
-			print_r($attributes);
+			//print_r($attributes);
 			//exit();
 
 			if (isset($attributes['ext-link-type']))
@@ -378,7 +377,7 @@ function dive($dom, $node, $passage = null)
 	// leaving
 	
 	$depth--;
-	echo str_pad('', (2 * $depth), ' ');
+	//echo str_pad('', (2 * $depth), ' ');
 	
 	switch ($tag_name)
 	{
