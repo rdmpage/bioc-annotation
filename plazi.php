@@ -1,5 +1,7 @@
 <?php
 
+// Exploring extracting annotations from Plazi XML
+
 
 //----------------------------------------------------------------------------------------
 // Recursively traverse DOM and process tags, add passages and annotations as we go

@@ -1,6 +1,6 @@
 <?php
 
-// Parse a biocjson file and generate simple HTML, loosely modelled on PubTator output
+// Parse a biocjson file and output GeoJSON for any geographic coordinates
 
 //----------------------------------------------------------------------------------------
 

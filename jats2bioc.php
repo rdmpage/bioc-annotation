@@ -2,7 +2,6 @@
 
 // Crude JATS XML to BioC converter, extracts mark up and adds as annotations.
 
-
 // https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC6982432
 
 //----------------------------------------------------------------------------------------
