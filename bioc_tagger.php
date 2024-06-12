@@ -418,7 +418,6 @@ function tag_geo(&$passage)
 		}
 	}
 	
-	
 	// Spanish https://doi.org/10.21068/c2018.v19s1a11
 	// 4°19´44”N y 71°43´54.1”O
 	if (preg_match_all("/
@@ -487,7 +486,7 @@ else
 	$filename = $argv[1];
 }
 
-$basename = basename($filename, '.json');
+$basename = preg_replace('/\.json$/', '', $filename);
 
 $output_filename = $basename . '-tagged.json';
 
