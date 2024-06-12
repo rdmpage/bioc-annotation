@@ -277,7 +277,7 @@ function dive($dom, $node)
 
 $filename = 'AB9508DD-9B19-52AC-AB50-564EF306D1BF.xml';
 
-$basename = basename($filename, '.xml');
+$basename = preg_replace('/\.xml$/', '', $filename);
 
 $output_filename = $basename . '.json';
 

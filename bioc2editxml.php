@@ -17,7 +17,7 @@ else
 	$filename = $argv[1];
 }
 
-$basename = basename($filename, '.json');
+$basename = preg_replace('/\.json$/', '', $filename);
 
 $output_filename = $basename . '.xml';
 

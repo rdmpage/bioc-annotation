@@ -15,7 +15,7 @@ else
 	$filename = $argv[1];
 }
 
-$basename = basename($filename, '.json');
+$basename = preg_replace('/\.json$/', '', $filename);
 
 $output_filename = $basename . '.html';
 
@@ -39,13 +39,51 @@ h1 {
 	font-size: 2em;
 	line-height: 2em;
 }
-</style>
+</style>';
 
-<link rel="stylesheet" href="pubtator.css">
-<link rel="stylesheet" href="extra.css">
+if (0)
+{
+	$html .= '<link rel="stylesheet" href="pubtator.css">';
+	$html .= '<link rel="stylesheet" href="extra.css">';
+}
+else
+{
+	$css = file_get_contents(dirname(__FILE__) . '/pubtator.css');
+	$html .= '<style>' . $css . '</style>';
+}
 
-</head>
+$html .= '</head>
 <body>';
+
+// metadata
+
+if (isset($obj->id))
+{
+	$html .= '<div>' . $obj->id . '</div>';
+}
+
+if (isset($obj->journal))
+{
+	$html .= '<div>' . $obj->journal . '</div>';
+}
+
+if (isset($obj->doi) || isset($obj->pmid))
+{
+	$html .= '<div>';
+	
+	if (isset($obj->doi))
+	{
+		$html .= 'doi:' . $obj->doi . ' ';
+	}
+	
+	if (isset($obj->pmid))
+	{
+		$html .= 'pmid:' . $obj->pmid . ' ';
+	}
+	
+	$html .= '</div>';
+
+}
 
 foreach ($obj->passages as $passage)
 {
