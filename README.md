@@ -22,9 +22,28 @@ A JSON version is used by [PubTator](https://www.ncbi.nlm.nih.gov/research/pubta
 
 Note that whereas NER tools expect entire tokens of text to be tagged (for example, including any punctuation such as terminating “,”), typically JATS XML will annotate just the relevant substring. Hence round tripping via NER tools will be a challenge because they will segment the text slightly differently.
 
-### bioctagger
+### bioc_delete_annotations
 
-`bioctagger.php` reads a BioC file and adds annotations for various entities that it finds in the text passages. These entities are found using, for example, simple regular expressions. This tool is intended to be a quick and dirty way of generating training data.
+`bioc_delete_annotations.php` deletes **ALL** annotations in a BioC file so that we can start again.
+
+### bioc_tagger
+
+`bioc_tagger.php` reads a BioC file and adds annotations for various entities that it finds in the text passages. These entities are found using, for example, simple regular expressions. This tool is intended to be a quick and dirty way of generating training data.
+
+### bioc_name_tagger
+
+`bioc_name_tagger.php` reads a BioC file and annotations scientific names, for example using TaxonFinder.
+
+To run TaxonFinder, download from https://glitch.com/edit/#!/right-frill, then install and run:
+
+```
+cd app
+npm install
+npm start server.js
+```
+
+This will give you TaxonFinder running on `localhost:3000`.
+
 
 ### bioc2crf
 
