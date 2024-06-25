@@ -283,6 +283,8 @@
 		var text = urlParams.get('text');
 
 		if (text) {
+		/* this won't work, it applies to the citation parser, need to use non-JQuery code, 
+		and figure out how we'd use this to access actual data */
 			text = decodeURIComponent(text);
 		
 		   $.get('api.php?text=' + encodeURIComponent(text) + '&format=xml',

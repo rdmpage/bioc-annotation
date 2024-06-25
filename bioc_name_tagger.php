@@ -52,7 +52,7 @@ function get($url, $format = '')
 // tag a taxonomic name
 function tag_name(&$passage)
 {
-	if (1)
+	if (0)
 	{
 		$passage->annotations = array();
 	}

@@ -41,7 +41,7 @@ h1 {
 }
 </style>';
 
-if (0)
+if (1)
 {
 	$html .= '<link rel="stylesheet" href="pubtator.css">';
 	$html .= '<link rel="stylesheet" href="extra.css">';

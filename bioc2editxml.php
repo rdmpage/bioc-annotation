@@ -75,8 +75,10 @@ foreach ($obj->passages as $passage)
 
 			if (!isset($close[$end]))
 			{
-				$close[$end][] = $annotation->infons->type;
+				$close[$end] = array();
 			}
+			
+			$close[$end][] = $annotation->infons->type;
 		}
 	
 	}

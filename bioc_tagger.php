@@ -51,8 +51,10 @@ function annotation_location($text, $highlight, &$last_pos, $offset = 0)
 // tag a date
 function tag_date(&$passage)
 {
+	// 18 Sept. 2000
+	// 22 Aug. 2009
 	if (preg_match_all("/
-			(?<hit>\d+\s+[A-Z][a-z]{2}\.?\s+[0-9]{4})
+			(?<hit>\d+\s+[A-Z][a-z]{2,3}\.?\s+[0-9]{4})
 		/xu",  $passage->text, $matches, PREG_SET_ORDER))
 	{
 		print_r($matches);
@@ -77,6 +79,35 @@ function tag_date(&$passage)
 			$passage->annotations[] = $annotation;
 		}	
 	}
+	
+	// 1 viii 2018
+	if (preg_match_all("/
+			(?<hit>\d+\s+[ivx]+\.?\s+[0-9]{4})
+		/xu",  $passage->text, $matches, PREG_SET_ORDER))
+	{
+		print_r($matches);
+		
+		$last_pos = 0;
+	
+		foreach ($matches as $match)
+		{
+			$annotation = new stdclass;
+			
+			$annotation->text = $match['hit'];
+			$annotation->infons = new stdclass;
+			$annotation->infons->type = 'Date';
+
+			$annotation->locations[] = annotation_location(
+				$passage->text, 
+				$annotation->text, 
+				$last_pos,
+				$passage->offset
+				);
+			
+			$passage->annotations[] = $annotation;
+		}	
+	}
+	
 }
 
 
@@ -232,6 +263,7 @@ function tag_geo(&$passage)
 		$DEGREES_SYMBOL
 		\s*
 		(?<latitude_minutes>$FLOAT)
+		\s*
 		$MINUTES_SYMBOL?
 		\s*
 		(
@@ -248,6 +280,7 @@ function tag_geo(&$passage)
 		$DEGREES_SYMBOL
 		\s*
 		(?<longitude_minutes>$FLOAT)
+		\s*
 		$MINUTES_SYMBOL?
 		\s*
 		(

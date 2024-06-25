@@ -11,7 +11,7 @@ require_once(dirname(__FILE__) . '/trie.php');
 // tag an entity in the trie
 function tag_trie($trie, &$passage, $tag_type = 'Species')
 {
-	if (1)
+	if (0)
 	{
 		$passage->annotations = array();
 	}
