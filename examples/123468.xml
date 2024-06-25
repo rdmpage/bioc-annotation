@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//TaxonX//DTD Taxonomic Treatment Publishing DTD v0 20100105//EN" "../../nlm/tax-treatment-NS0.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tp="http://www.plazi.org/taxpub" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">3</journal-id>
+      <journal-id journal-id-type="index">urn:lsid:arphahub.com:pub:F7FCE910-8E78-573F-9C77-7788555F8AAD</journal-id>
+      <journal-id journal-id-type="aggregator">urn:lsid:zoobank.org:pub:66878968-5FA3-48E4-A0CA-743FBBB0315D</journal-id>
+      <journal-title-group>
+        <journal-title xml:lang="en">PhytoKeys</journal-title>
+        <abbrev-journal-title xml:lang="en">PK</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">1314-2011</issn>
+      <issn pub-type="epub">1314-2003</issn>
+      <publisher>
+        <publisher-name>Pensoft Publishers</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.3897/phytokeys.243.123468</article-id>
+      <article-id pub-id-type="publisher-id">123468</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="biological_taxon">
+          <subject>Boraginaceae</subject>
+        </subj-group>
+        <subj-group subj-group-type="scientific_subject">
+          <subject>Taxonomy</subject>
+        </subj-group>
+        <subj-group subj-group-type="geological_era">
+          <subject>Precambrian</subject>
+        </subj-group>
+        <subj-group subj-group-type="geographical_area">
+          <subject>Asia</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>﻿<italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> (<tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>), a new species from Xinjiang, China</article-title>
+      </title-group>
+      <contrib-group content-type="authors">
+        <contrib contrib-type="author" corresp="no">
+          <name name-style="western">
+            <surname>Liu</surname>
+            <given-names>Dan-Hui</given-names>
+          </name>
+          <uri content-type="orcid">https://orcid.org/0000-0002-0195-1436</uri>
+          <xref ref-type="aff" rid="A1">1</xref>
+          <xref ref-type="aff" rid="A2">2</xref>
+          <role content-type="http://credit.niso.org/contributor-roles/conceptualization/">Conceptualization</role>
+          <role content-type="http://credit.niso.org/contributor-roles/writing-original-draft/">Writing - original draft</role>
+          <role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing - review and editing</role>
+          <role content-type="http://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+          <role content-type="http://credit.niso.org/contributor-roles/formal-analysis/">Formal analysis</role>
+        </contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name name-style="western">
+            <surname>Zhou</surname>
+            <given-names>Yi-Xin</given-names>
+          </name>
+          <uri content-type="orcid">https://orcid.org/0000-0002-0054-0301</uri>
+          <xref ref-type="aff" rid="A1">1</xref>
+          <xref ref-type="aff" rid="A2">2</xref>
+          <xref ref-type="aff" rid="A3">3</xref>
+          <role content-type="http://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+          <role content-type="http://credit.niso.org/contributor-roles/formal-analysis/">Formal analysis</role>
+          <role content-type="http://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+        </contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name name-style="western">
+            <surname>Shang</surname>
+            <given-names>Shu-Jing</given-names>
+          </name>
+          <uri content-type="orcid">https://orcid.org/0009-0006-8092-7616</uri>
+          <xref ref-type="aff" rid="A4">4</xref>
+          <role content-type="http://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+          <role content-type="http://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+        </contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name name-style="western">
+            <surname>Wu</surname>
+            <given-names>Jia-Ju</given-names>
+          </name>
+          <uri content-type="orcid">https://orcid.org/0009-0009-0640-0754</uri>
+          <xref ref-type="aff" rid="A5">5</xref>
+          <role content-type="http://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+          <role content-type="http://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Li</surname>
+            <given-names>Wen-Jun</given-names>
+          </name>
+          <email xlink:type="simple">liwenjunao@ms.xjb.ac.cn</email>
+          <uri content-type="orcid">https://orcid.org/0000-0002-2932-0783</uri>
+          <xref ref-type="aff" rid="A1">1</xref>
+          <xref ref-type="aff" rid="A2">2</xref>
+          <xref ref-type="aff" rid="A3">3</xref>
+          <role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing - review and editing</role>
+        </contrib>
+      </contrib-group>
+      <aff id="A1">
+        <label>1</label>
+        <addr-line content-type="verbatim">State Key Laboratory of Desert and Oasis Ecology, Key Laboratory of Ecological Security and Sustainable Development in Arid Areas, Xinjiang Institute of Ecology and Geography, Chinese Academy of Sciences, Urumqi 830011, China</addr-line>
+        <institution>Xinjiang Institute of Ecology and Geography, Chinese Academy of Sciences</institution>
+        <addr-line content-type="city">Urumqi</addr-line>
+        <country>China</country>
+      </aff>
+      <aff id="A2">
+        <label>2</label>
+        <addr-line content-type="verbatim">Conservation and Utilization of Plant Gene Resources, Key Laboratory of Xinjiang, Urumqi 830011, China</addr-line>
+        <institution>Conservation and Utilization of Plant Gene Resources, Key Laboratory of Xinjiang</institution>
+        <addr-line content-type="city">Urumqi</addr-line>
+        <country>China</country>
+      </aff>
+      <aff id="A3">
+        <label>3</label>
+        <addr-line content-type="verbatim">College of Resources and Environment, University of Chinese Academy of Sciences, Beijing 100049, China</addr-line>
+        <institution>University of Chinese Academy of Sciences</institution>
+        <addr-line content-type="city">Beijing</addr-line>
+        <country>China</country>
+      </aff>
+      <aff id="A4">
+        <label>4</label>
+        <addr-line content-type="verbatim">College of Forestry and Landscape Architecture, Xinjiang Agricultural University, Urumqi 830052, China</addr-line>
+        <institution>Xinjiang Agricultural University</institution>
+        <addr-line content-type="city">Urumqi</addr-line>
+        <country>China</country>
+      </aff>
+      <aff id="A5">
+        <label>5</label>
+        <addr-line content-type="verbatim">College of Life Sciences and Technologies, Tarim University, Alar 843300, China</addr-line>
+        <institution>Tarim University</institution>
+        <addr-line content-type="city">Alar</addr-line>
+        <country>China</country>
+      </aff>
+      <author-notes>
+        <fn fn-type="corresp">
+          <p>Corresponding author: Wen-Jun Li (<email xlink:type="simple">liwenjunao@ms.xjb.ac.cn)</email></p>
+        </fn>
+        <fn fn-type="edited-by">
+          <p>Academic editor: James Cohen</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2024</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>21</day>
+        <month>06</month>
+        <year>2024</year>
+      </pub-date>
+      <volume>243</volume>
+      <fpage>105</fpage>
+      <lpage>112</lpage>
+      <uri content-type="arpha" xlink:href="http://openbiodiv.net/E8779E4A-98F1-568E-9B2A-39FB1EE0856D">E8779E4A-98F1-568E-9B2A-39FB1EE0856D</uri>
+      <history>
+        <date date-type="received">
+          <day>20</day>
+          <month>03</month>
+          <year>2024</year>
+        </date>
+        <date date-type="accepted">
+          <day>11</day>
+          <month>06</month>
+          <year>2024</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Dan-Hui Liu, Yi-Xin Zhou, Shu-Jing Shang, Jia-Ju Wu, Wen-Jun Li</copyright-statement>
+        <license license-type="creative-commons-attribution" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+          <license-p>This is an open access article distributed under the terms of the Creative Commons Attribution License (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <label>﻿Abstract</label>
+        <p><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> D.H.Liu &amp; W.J.Li, a new species of <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name> from Xinjiang, China, is described and illustrated in this study. The new species is morphologically similar to <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic>. However, it can be distinguished from the compared species by several characteristics, such as: stem single, erect, frequently branched at middle and above, densely spreading hispid, hairs discoid at base; corolla white or blue; fruit compressed, heteromorphic nutlets with two rows of marginal glochids, nutlets acute ovoid, disc narrowly ovate-triangular. The diagnosis of the new species is supported with comprehensive investigation including photographs, detailed description, notes on etymology, distribution and habitat, conservation status, as well as comparisons with morphologically similar species.</p>
+      </abstract>
+      <kwd-group>
+        <label>Key words:</label>
+        <kwd>
+          <tp:taxon-name>
+            <tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part>
+          </tp:taxon-name>
+        </kwd>
+        <kwd>China</kwd>
+        <kwd>
+          <italic>
+            <tp:taxon-name>
+              <tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part>
+            </tp:taxon-name>
+          </italic>
+        </kwd>
+        <kwd>new taxon</kwd>
+        <kwd>taxonomy</kwd>
+      </kwd-group>
+      <funding-group>
+        <funding-statement>Natural Science Foundation of Xinjiang Province, China (grant no. 2023D01B02), National Natural Science Foundation of China (grant no. 32300183), the Third Xinjiang Scientific Expedition Program (grant no. 2022xjkk1505) and Shanghai Cooperation Organization Partnership and International Technology Cooperation Plan of Science and Technology Projects (grant no. 2023E01018).</funding-statement>
+      </funding-group>
+    </article-meta>
+    <notes>
+      <sec sec-type="Citation" id="SECID0ESH">
+        <title>Citation</title>
+        <p>Liu D-H, Zhou Y-X, Shang S-J, Wu J-J, Li W-J (2024) <italic>Lappula effusa</italic> (Boraginaceae), a new species from Xinjiang, China. PhytoKeys 243: 105–112. <ext-link xlink:href="10.3897/phytokeys.243.123468" ext-link-type="doi" xlink:type="simple">https://doi.org/10.3897/phytokeys.243.123468</ext-link></p>
+      </sec>
+    </notes>
+  </front>
+  <body>
+    <sec sec-type="﻿Introduction" id="SECID0EOAAC">
+      <title>﻿Introduction</title>
+      <p>The genus <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Moench, belonging to the <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name> family within the <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="tribe">Rochelieae</tp:taxon-name-part></tp:taxon-name> tribe, encompasses approximately with 50–70 species (<xref ref-type="bibr" rid="B15">Ovczinnikova 2005</xref>; <xref ref-type="bibr" rid="B23">Weigend et al. 2016</xref>). These species are predominantly distributed in Eurasia, North Africa, North and South America and Australia, with the centre of species diversity lying in Central Asia (<xref ref-type="bibr" rid="B22">Wang 1981</xref>; <xref ref-type="bibr" rid="B15">Ovczinnikova 2005</xref>, <xref ref-type="bibr" rid="B17">2021</xref>; <xref ref-type="bibr" rid="B7">Huang et al. 2013</xref>). <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> is characterised by prickly cauline leaves, blue/white corollas that each bear five throat appendages, a subulate gynobase, nutlets four, homomorphic or heteromorphic and nutlets with either one/more rows of marginal glochids or marginal wings tipped with anchor-like spines (<xref ref-type="bibr" rid="B18">Popov 1953</xref>; <xref ref-type="bibr" rid="B19">Riedl 1967</xref>; <xref ref-type="bibr" rid="B24">Zhu et al. 1995</xref>; <xref ref-type="bibr" rid="B7">Huang et al. 2013</xref>; <xref ref-type="bibr" rid="B23">Weigend et al. 2016</xref>; <xref ref-type="bibr" rid="B9">Khoshsokhan-Mozaffar et al. 2018</xref>).</p>
+      <p>Initially, <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> had been treated as a member of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Myosotis">Myosotis</tp:taxon-name-part></tp:taxon-name></italic> L. (<xref ref-type="bibr" rid="B10">Linnaeus 1753</xref>), with <xref ref-type="bibr" rid="B13">Moench (1794)</xref> later distinguishing and circumscribing <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> as a separate genus. In the taxonomy of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> originating from <xref ref-type="bibr" rid="B2">Candolle (1846)</xref>, there were 38 species in the <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Prodromus">Prodromus</tp:taxon-name-part></tp:taxon-name></italic> and these species were classified into three sections, based on the morphology of nutlets. In the Flora USSR, <xref ref-type="bibr" rid="B18">Popov (1953)</xref> identified 39 species and improved the infrageneric classification of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> by introducing two sections and 14 series. <xref ref-type="bibr" rid="B15">Ovczinnikova (2005)</xref> recognised 70 species and proposed an updated infrageneric classification of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic>, based on corolla, nutlets and gynobase morphology. She classified the 70 species into eight sections and 14 series. Recent molecular phylogenetic studies showed that <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> was polyphyletic and some species were transferred to the <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Rochelia">Rochelia</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Pseudolappula">Pseudolappula</tp:taxon-name-part></tp:taxon-name></italic> (<xref ref-type="bibr" rid="B7">Huang et al. 2013</xref>; <xref ref-type="bibr" rid="B9">Khoshsokhan-Mozaffar et al. 2018</xref>; <xref ref-type="bibr" rid="B11">Liu et al. 2021</xref>). In China, the genus <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> had 31–36 species and was highly diversified in north-western China, especially in Xinjiang Province (<xref ref-type="bibr" rid="B22">Wang 1981</xref>; <xref ref-type="bibr" rid="B24">Zhu et al. 1995</xref>).</p>
+      <p>During field investigations in Xinjiang Province, China, an unknown population of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> was discovered in Balikun County. It appeared to be similar to <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> Ching J.Wang and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic> Popov in general habit and fruit morphology. However, the unknown population showed great differences in an array of characters: stem single, frequently branched at middle and above, spreading; style surpassing the fruit by ca. 0.5 mm, fruit compressed, nutlets acute ovoid and disc narrowly ovate-triangular (Figs <xref ref-type="fig" rid="F1">1</xref>, <xref ref-type="fig" rid="F3">3</xref>). After conducting a comprehensive review of relevant literature (<xref ref-type="bibr" rid="B6">Gürke 1894</xref>; <xref ref-type="bibr" rid="B1">Brand 1931</xref>; <xref ref-type="bibr" rid="B18">Popov 1953</xref>; <xref ref-type="bibr" rid="B21">Vvedensky 1961</xref>; <xref ref-type="bibr" rid="B20">Sharashova 1962</xref>; <xref ref-type="bibr" rid="B5">Goloskokov 1964</xref>; <xref ref-type="bibr" rid="B19">Riedl 1967</xref>; <xref ref-type="bibr" rid="B3">Chukavina 1984</xref>; <xref ref-type="bibr" rid="B14">Nasir 1989</xref>; <xref ref-type="bibr" rid="B24">Zhu et al. 1995</xref>; <xref ref-type="bibr" rid="B16">Ovczinnikova 2009</xref>) and examining specimens of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> from the Herbaria of Royal Botanic Garden Edinburgh (E), Muséum National d’Histoire Naturelle (P), Komarov Botanical Institute of RAS (<abbrev xlink:title="Komarov Botanical Institute of RAS" id="ABBRID0ENJAC">LE</abbrev>), <named-content xlink:type="simple" content-type="institution" xlink:href="http://grbio.org/institution/moscow-state-university">Moscow University</named-content> (<named-content content-type="dwc:institutional_code" xlink:title="Moscow University" xlink:href="http://grbio.org/institution/moscow-state-university">MW</named-content>), Central Siberian Botanical Garden SB RAS (<abbrev xlink:title="Central Siberian Botanical Garden SB RAS" id="ABBRID0EVJAC">NS</abbrev>), <named-content xlink:type="simple" content-type="institution" xlink:href="http://grbio.org/institution/institute-botany-chinese-academy-sciences">Institute of Botany, Chinese Academy of Sciences</named-content> (<named-content content-type="dwc:institutional_code" xlink:title="Institute of Botany, Chinese Academy of Sciences" xlink:href="http://grbio.org/institution/institute-botany-chinese-academy-sciences">PE</named-content>), <named-content xlink:type="simple" content-type="institution" xlink:href="http://grbio.org/institution/northwestern-institute-botany">North-western Institute of Botany</named-content> (<named-content content-type="dwc:institutional_code" xlink:title="North-western Institute of Botany" xlink:href="http://grbio.org/institution/northwestern-institute-botany">WUK</named-content>), <named-content xlink:type="simple" content-type="institution" xlink:href="http://grbio.org/institution/northwest-plateau-institute-biology-chinese-academy-sciences">Northwest Institute of Plateau Biology, Chinese Academy of Sciences</named-content> (<named-content content-type="dwc:institutional_code" xlink:title="Northwest Institute of Plateau Biology, Chinese Academy of Sciences" xlink:href="http://grbio.org/institution/northwest-plateau-institute-biology-chinese-academy-sciences">HNWP</named-content>), National Herbarium of Uzbekistan (<abbrev content-type="institution" xlink:title="National Herbarium of Uzbekistan" id="ABBRID0EFKAC">TASH</abbrev>) and <named-content xlink:type="simple" content-type="institution" xlink:href="http://grbio.org/institution/xinjiang-institute-ecology-and-geography">Xinjiang Institute of Ecology and Geography, Chinese Academy of Sciences</named-content> (<named-content content-type="dwc:institutional_code" xlink:title="Xinjiang Institute of Ecology and Geography, Chinese Academy of Sciences" xlink:href="http://grbio.org/institution/xinjiang-institute-ecology-and-geography">XJBI</named-content>), we concluded that it did not match morphologically with any known species of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic>. Based on these distinctive morphological features, we confirmed that it was a new species, which we describe and illustrate here as <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> D.H.Liu &amp; W.J.Li.</p>
+      <fig id="F1" position="float" orientation="portrait">
+        <object-id content-type="doi">10.3897/phytokeys.243.123468.figure1</object-id>
+        <object-id content-type="arpha">940E1D86-4E4B-5CE3-9EF9-1F471184A85F</object-id>
+        <label>Figure 1.</label>
+        <caption>
+          <p><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> D.H.Liu &amp; W.J.Li, sp. nov. <bold>A</bold> habitat <bold>B</bold> habit <bold>C, D</bold> flower morphology <bold>E</bold> inflorescences <bold>F</bold> fruit <bold>G</bold> spreading calyx in fruit.</p>
+        </caption>
+        <graphic xlink:href="phytokeys-243-105_article-123468__-g001.jpg" position="float" orientation="portrait" xlink:type="simple" id="oo_1076608.jpg">
+          <uri content-type="original_file">https://binary.pensoft.net/fig/1076608</uri>
+        </graphic>
+      </fig>
+    </sec>
+    <sec sec-type="materials|methods" id="SECID0EDMAC">
+      <title>﻿Materials and methods</title>
+      <p>The voucher specimens of the new species in this study were collected during our field expedition to Xinjiang Province in 2023. Photographs were captured using a Nikon Z7 II digital camera (Tokyo, Japan), while morphological observations and measurements were conducted on living plants in the field and herbarium specimens deposited at <named-content content-type="dwc:institutional_code" xlink:title="Xinjiang Institute of Ecology and Geography, Chinese Academy of Sciences" xlink:href="http://grbio.org/institution/xinjiang-institute-ecology-and-geography">XJBI</named-content>. For morphological comparison, we critically examined available digitised specimens of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> stored in the E (<ext-link xlink:href="https://data.rbge.org.uk/search/" ext-link-type="uri" xlink:type="simple">https://data.rbge.org.uk/search/</ext-link> herbarium/), <abbrev xlink:title="Komarov Botanical Institute of RAS" id="ABBRID0EZMAC">LE</abbrev> (<ext-link xlink:href="https://plant.depo.msu.ru/" ext-link-type="uri" xlink:type="simple">https://plant.depo.msu.ru/</ext-link>), <named-content content-type="dwc:institutional_code" xlink:title="Moscow University" xlink:href="http://grbio.org/institution/moscow-state-university">MW</named-content> (<ext-link xlink:href="https://en.herbariumle.ru/" ext-link-type="uri" xlink:type="simple">https://en.herbariumle.ru/</ext-link>), <abbrev xlink:title="Central Siberian Botanical Garden SB RAS" id="ABBRID0ELNAC">NS</abbrev> (<ext-link xlink:href="http://herb.csbg.nsc.ru:8081/" ext-link-type="uri" xlink:type="simple">http://herb.csbg.nsc.ru:8081/</ext-link>) and P (<ext-link xlink:href="https://science.mnhn.fr/institution/mnhn/collection/p/item/search" ext-link-type="uri" xlink:type="simple">https://science.mnhn.fr/institution/mnhn/collection/p/item/search</ext-link>), as well as physical herbarium specimens deposited at <named-content content-type="dwc:institutional_code" xlink:title="Institute of Botany, Chinese Academy of Sciences" xlink:href="http://grbio.org/institution/institute-botany-chinese-academy-sciences">PE</named-content>, <named-content content-type="dwc:institutional_code" xlink:title="Northwest Institute of Plateau Biology, Chinese Academy of Sciences" xlink:href="http://grbio.org/institution/northwest-plateau-institute-biology-chinese-academy-sciences">HNWP</named-content>, <abbrev xlink:title="National Herbarium of Uzbekistan" id="ABBRID0EBOAC">TASH</abbrev>, <named-content content-type="dwc:institutional_code" xlink:title="North-western Institute of Botany" xlink:href="http://grbio.org/institution/northwestern-institute-botany">WUK</named-content> and <named-content content-type="dwc:institutional_code" xlink:title="Xinjiang Institute of Ecology and Geography, Chinese Academy of Sciences" xlink:href="http://grbio.org/institution/xinjiang-institute-ecology-and-geography">XJBI</named-content>. Additionally, we compared the morphological characteristics of the new species with those of similar species, relying on online or physical specimens. The conservation status was assessed following the IUCN guidelines (<xref ref-type="bibr" rid="B8">IUCN 2022</xref>). In this study, we employed the morphological species concept (<xref ref-type="bibr" rid="B4">Davis and Heywood 1963</xref>; <xref ref-type="bibr" rid="B12">Mallet 1995</xref>), which defines species solely by their morphological differences.</p>
+    </sec>
+    <sec sec-type="﻿Results" id="SECID0EZOAC">
+      <title>﻿Results</title>
+      <sec sec-type="﻿Taxonomy" id="SECID0E4OAC">
+        <title>﻿Taxonomy</title>
+        <tp:taxon-treatment>
+          <tp:treatment-meta>
+            <kwd-group>
+              <label>Taxon classification</label>
+              <kwd>
+                <named-content content-type="kingdom" xlink:type="simple">Plantae</named-content>
+              </kwd>
+              <kwd>
+                <named-content content-type="order" xlink:type="simple">Boraginales</named-content>
+              </kwd>
+              <kwd>
+                <named-content content-type="family" xlink:type="simple">Boraginaceae</named-content>
+              </kwd>
+            </kwd-group>
+          </tp:treatment-meta>
+          <tp:nomenclature>
+            <label>﻿</label>
+            <tp:taxon-name><object-id content-type="arpha">3F003351-4A01-5C0A-BDF5-35CC77D4FC5A</object-id>
+              <tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part>
+              <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part>
+              <object-id content-type="ipni" xlink:type="simple">urn:lsid:ipni.org:names77343947-1</object-id>
+            </tp:taxon-name>
+            <tp:taxon-authority>D.H.Liu &amp; W.J.Li</tp:taxon-authority>
+            <tp:taxon-status>sp. nov.</tp:taxon-status>
+            <xref ref-type="fig" rid="F1">Figs 1</xref>
+            <xref ref-type="fig" rid="F2">, 2</xref>
+            <xref ref-type="fig" rid="F3">, 3</xref>
+          </tp:nomenclature>
+          <tp:treatment-sec sec-type="diagnosis" id="SECID0EYAAE">
+            <title>Diagnosis.</title>
+            <p>The new species is morphologically similar to <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic>, but differs from the <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> primarily in the following characteristics: stem single (vs. stems 4–6, cespitose), erect (vs. ascending or erect), frequently branched at middle and above (vs. branched above), densely spreading hispid, hairs discoid at base (vs. densely appressed pubescent); corolla white or blue (vs. blue); fruit compressed (vs. fruit globose), nutlets acute ovoid, ca. 2.5 mm long, 1 mm wide, 0.5 mm thickness (vs. ovoid, ca. 2.5 mm long, 1.5 mm wide, 1 mm thickness), the inner glochids erect (vs. often curved), disc narrowly ovate-triangular (vs. ovoid) (Figs <xref ref-type="fig" rid="F2">2</xref>, <xref ref-type="fig" rid="F3">3</xref>). Furthermore, compared to the <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic>, the new species is 12–28 cm tall (vs. 30–50 cm tall), stem single (vs. stems 2–3), densely spreading hair (vs. appressed or semi-appressed hair), fruit compressed (vs. fruit globose-ovoid), nutlets acute ovoid, 0.5 mm thickness (vs. ovoid, 1 mm thickness), disc narrowly ovate-triangular (vs. oblong or ovate), inner glochids erect, ca. 0.5 mm long (vs. curved, 1–1.2 mm long), style surpassing nutlets and glochids (vs. style slightly surpassing nutlets, but not surpassing glochids) (Figs <xref ref-type="fig" rid="F2">2</xref>, <xref ref-type="fig" rid="F3">3</xref>).</p>
+            <fig id="F2" position="float" orientation="portrait">
+              <object-id content-type="doi">10.3897/phytokeys.243.123468.figure2</object-id>
+              <object-id content-type="arpha">0EC5CF6B-3311-533E-881B-1073A2C6E63E</object-id>
+              <label>Figure 2.</label>
+              <caption>
+                <p>Type specimens of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic>, <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic><bold>A</bold> holotype of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> (PE00029615!) <bold>B</bold> lectotype of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic> (<abbrev xlink:title="Komarov Botanical Institute of RAS" id="ABBRID0E4EAE">LE</abbrev> 140!) <bold>C</bold> holotype of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> (XJBI00135936!).</p>
+              </caption>
+              <graphic xlink:href="phytokeys-243-105_article-123468__-g002.jpg" position="float" orientation="portrait" xlink:type="simple" id="oo_1076609.jpg">
+                <uri content-type="original_file">https://binary.pensoft.net/fig/1076609</uri>
+              </graphic>
+            </fig>
+            <fig id="F3" position="float" orientation="portrait">
+              <object-id content-type="doi">10.3897/phytokeys.243.123468.figure3</object-id>
+              <object-id content-type="arpha">50EE22C7-1247-5F06-AD65-0842DF6B96C9</object-id>
+              <label>Figure 3.</label>
+              <caption>
+                <p>Morphological comparisons of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic>, <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic>. <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic><bold>A</bold> stem indumentum <bold>B</bold> gynobase <bold>C</bold> fruit lateral view <bold>D</bold> fruit polar view <bold>E</bold> nutlet abaxial view (with short glochids) <bold>F</bold> nutlet lateral view (with long glochids) <bold>G</bold> nutlet lateral view (with short glochids) <bold>H</bold> nutlet adaxial view. <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic><bold>I</bold> stem indumentum <bold>J</bold> gynobase <bold>K</bold> fruit lateral view <bold>L</bold> fruit polar view <bold>M</bold> nutlet abaxial view (with short glochids) <bold>N</bold> nutlet abaxial view (with long glochids) <bold>O</bold> nutlet lateral view <bold>P</bold> nutlet adaxial view. <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic><bold>Q</bold> stem indumentum <bold>R</bold> gynobase <bold>S</bold> fruit lateral view <bold>T</bold> fruit polar view <bold>U</bold> nutlet abaxial view (with short glochids) <bold>V</bold> nutlet abaxial view (with long glochids) <bold>W</bold> nutlet lateral view <bold>X</bold> nutlet adaxial view. Scale bar represents 0.5 mm.</p>
+              </caption>
+              <graphic xlink:href="phytokeys-243-105_article-123468__-g003.jpg" position="float" orientation="portrait" xlink:type="simple" id="oo_1076610.jpg">
+                <uri content-type="original_file">https://binary.pensoft.net/fig/1076610</uri>
+              </graphic>
+            </fig>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="material" id="SECID0ESJAE">
+            <title>Type.</title>
+            <p>China. Xinjiang: Balikun County, Dahongliuxia Village, growing on the gravel desert, <named-content content-type="dwc:verbatimCoordinates"><named-content content-type="geo-json" specific-use="{&quot;type&quot;:&quot;Point&quot;,&quot;coordinates&quot;:[91.502653,44.790603]}" id="NCID0E2JAE">44°47'26.17N, 91°30'9.55E</named-content></named-content>, alt. 842 m, 18 June 2023, <italic>D.H.Liu, Y.X.Zhou, S.J.Shang et al. 2023EH908</italic> (holotype: XJBI00135936!).</p>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="description" id="SECID0ECKAE">
+            <title>Description.</title>
+            <p>Annual herbs. <bold><italic>Stems</italic></bold> erect, single, frequently branched at middle and above, 12–28 cm tall, with spreading white hispid, hairs discoid at base (Fig. <xref ref-type="fig" rid="F3">3I</xref>). <bold><italic>Basal leaves</italic></bold> forming a rosette; leaf blade spatulate, 1.5–2.5 cm long, 2–4 mm wide, densely spreading white hirsute, hairs discoid at base; withered in fruit; <bold><italic>Stem leaves</italic></bold> linear-lanceolate, 1–2 cm long, 2–4 mm wide, abaxially densely spreading white hispid, adaxially sparsely hispid or glabrous, hairs discoid at base. <bold><italic>Inflorescences</italic></bold> elongated to 5–10 cm long in fruit, with oval bracts near 3–5 mm long, 1.5–2.5 mm wide. <bold><italic>Pedicels</italic></bold> short, ca. 1 mm long in flowering and elongated from 2.5–3 mm long in fruit. <bold><italic>Calyx</italic></bold> lobes oblong, ca. 1.5 mm long, 1 mm wide, slightly elongated ca. 2 mm long in fruit, spread, abaxially densely spreading hispid, adaxially sparsely hispid or glabrous. <bold><italic>Corolla</italic></bold> blue and white (plants with either all blue or all white corollas), campanulate, corolla tube ca. 1.5 mm long; limb as long as tube, ca. 1.5 mm wide, lobes obtuse; throat appendages white or light yellow, trapeziform, ca. 0.3 mm high; stamens five, included in the corolla tube, filament short, inserted at the middle of tube, anthers brown. <bold><italic>Gynobase</italic></bold> narrowly subulate (Fig. <xref ref-type="fig" rid="F3">3J</xref>), with a style surpassing the nutlets by ca. 0.5 mm. <bold><italic>Coenobium</italic></bold> laterally compressed ovoid (Fig. <xref ref-type="fig" rid="F3">3L</xref>), with glochids 2.5–3 mm in diameter. <bold><italic>Nutlets</italic></bold> four, heteromorphic, easily separated from gynobase, acute ovoid; 2.5–3 mm long, ca. 1.2 mm wide, disc narrowly ovate, adaxially granulose, centre-line keeled, with a single row glochids, glochids erect; marginal glochids in 2 rows, erect, two nutlets with the inner glochids 0.5–1 mm long, outer glochids 0.2–0.5 mm long (Fig. <xref ref-type="fig" rid="F3">3N</xref>); two other nutlets with short glochids, inner glochids less than 0.5 mm long, outer glochids reduced to 0.1–0.2 mm or tuberculate (Fig. <xref ref-type="fig" rid="F3">3M</xref>); nutlets thin, ca. 0.5 mm thickness (Fig. <xref ref-type="fig" rid="F3">3O</xref>); abaxially granulose, cicatrix narrow lanceolate, ca. 1 mm long, located in the base of nutlets, adaxial keel ca. 1.5 mm long (Fig. <xref ref-type="fig" rid="F3">3P</xref>).</p>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="distribution" id="SECID0ERMAE">
+            <title>Distribution and ecology.</title>
+            <p>The new species is currently known only from its type locality in Dahongliuxia Village, Balikun County, Xinjiang Province, China. It grows in gravel desert at an elevation of 840 m above sea level.</p>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="phenology" id="SECID0EWMAE">
+            <title>Phenology.</title>
+            <p>Flowering and fruiting from May to July.</p>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="etymology" id="SECID0E2MAE">
+            <title>Etymology.</title>
+            <p>The specific epithet refers to the appearance of new species, stems frequently branched at middle and above and nearly horizontal spreading.</p>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="Vernacular name" id="SECID0EANAE">
+            <title>Vernacular name.</title>
+            <p>Simplified Chinese: 展枝鹤虱 (Chinese pinyin: zhǎn zhī hè shī).</p>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="conservation status" id="SECID0EFNAE">
+            <title>Conservation status.</title>
+            <p>Based on the current survey data, we have only found a single population of the new species at its type locality, Dahongliuxia Village, Balikun County, Xinjiang Province, China. Data for the <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> were still insufficient to assess its conservation status. According to the IUCN Criteria (<xref ref-type="bibr" rid="B8">IUCN 2022</xref>), the conservation status of this new species is temporarily assessed as Data Deficient (DD) until more information becomes available.</p>
+          </tp:treatment-sec>
+          <tp:treatment-sec sec-type="notes" id="SECID0E1NAE">
+            <title>Notes.</title>
+            <p>Based on the classification of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> by <xref ref-type="bibr" rid="B15">Ovczinnikova (2005)</xref>, the new species <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> should belong to the sect. <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula"/><tp:taxon-name-part taxon-name-part-type="section" reg="Microcarpae">Microcarpae</tp:taxon-name-part></tp:taxon-name> (M. Pop.) Ovczinnikova, ser. <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="series">Tianschanicae</tp:taxon-name-part></tp:taxon-name> M. Pop. ex Ovczinnikova, which is characterised by the narrowly subulate gynobase, style surpassing the nutlets by ca. 0.5–1 mm, heteromorphic nutlets with two rows of marginal glochids, disc with centre line keel. Amongst this series, there are approximately seven species (<italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="aktaviensis">aktaviensis</tp:taxon-name-part></tp:taxon-name></italic> Popov &amp; Zakirov; <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic>; <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="pratensis">pratensis</tp:taxon-name-part></tp:taxon-name></italic> Ching J.Wang; <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="sericata">sericata</tp:taxon-name-part></tp:taxon-name></italic> Popov; <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="subcaespitosa">subcaespitosa</tp:taxon-name-part></tp:taxon-name></italic> M Popov ex Golosk.; <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic>; <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tianschanica">tianschanica</tp:taxon-name-part></tp:taxon-name></italic> Popov &amp; Zakirov). <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> most resembles <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic>, sharing similar corolla and gynobase morphology. However, nutlets are always important for identification and classification of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part></tp:taxon-name></italic> (<xref ref-type="bibr" rid="B18">Popov 1953</xref>; <xref ref-type="bibr" rid="B19">Riedl 1967</xref>; <xref ref-type="bibr" rid="B24">Zhu et al. 1995</xref>; <xref ref-type="bibr" rid="B15">Ovczinnikova 2005</xref>) and the new species exhibits distinctive nutlet morphology from the compared species: i.e. relatively compressed fruit, acute ovoid nutlets, narrowly ovate disc and short marginal glochids. Additionally, <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic> are distributed in the mountain areas of Xizang and western Xinjiang (Himalaya and Pamir, usually 1800–4000 m a.s.l.), while <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name></italic> occurs in the gravel desert of eastern Xinjiang (lower than 1000 m a.s.l.). The detailed differences amongst these three species are provided in Table <xref ref-type="table" rid="T1">1</xref>.</p>
+            <table-wrap id="T1" position="float" orientation="portrait">
+              <label>Table 1.</label>
+              <caption>
+                <p>Morphological comparisons of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name></italic> and <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name></italic>.</p>
+              </caption>
+              <table id="TID0E34AE" rules="all">
+                <tbody>
+                  <tr>
+                    <th rowspan="1" colspan="1">Characters</th>
+                    <th rowspan="1" colspan="1">
+                      <italic>
+                        <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part></tp:taxon-name>
+                      </italic>
+                    </th>
+                    <th rowspan="1" colspan="1">
+                      <italic>
+                        <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="himalayensis">himalayensis</tp:taxon-name-part></tp:taxon-name>
+                      </italic>
+                    </th>
+                    <th rowspan="1" colspan="1">
+                      <italic>
+                        <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">L.</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species" reg="tadshikorum">tadshikorum</tp:taxon-name-part></tp:taxon-name>
+                      </italic>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Habit</td>
+                    <td rowspan="1" colspan="1">12–28 cm</td>
+                    <td rowspan="1" colspan="1">7–15 cm</td>
+                    <td rowspan="1" colspan="1">30–50 cm</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Stem</td>
+                    <td rowspan="1" colspan="1">stem single, erect, branched from middle and above, with spreading hair</td>
+                    <td rowspan="1" colspan="1">stems 4–6, cespitose, ascending or erect, branched from above, with appressed hair</td>
+                    <td rowspan="1" colspan="1">stems 2–3, erect, branched from above, with (semi-) appressed hair</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Leave indumentum</td>
+                    <td rowspan="1" colspan="1">abaxial densely spreading hispid, adaxially sparsely hispid or glabrous</td>
+                    <td rowspan="1" colspan="1">abaxial densely appressed pubescent, adaxially sparsely pubescent</td>
+                    <td rowspan="1" colspan="1">abaxial densely spreading hair, adaxially sparsely</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Inflorescences</td>
+                    <td rowspan="1" colspan="1">5–10 cm in fruit</td>
+                    <td rowspan="1" colspan="1">3–7 cm in fruit</td>
+                    <td rowspan="1" colspan="1">3–7 cm in fruit</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Pedicel</td>
+                    <td rowspan="1" colspan="1">2–3 mm long in fruit</td>
+                    <td rowspan="1" colspan="1">1.5–2 mm long in fruit</td>
+                    <td rowspan="1" colspan="1">1–3 mm long in fruit</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Calyx</td>
+                    <td rowspan="1" colspan="1">ca. 2 mm and shorter than the nutlets</td>
+                    <td rowspan="1" colspan="1">ca. 2 mm and shorter than the nutlets</td>
+                    <td rowspan="1" colspan="1">ca. 2 mm and shorter than the nutlets</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Corolla</td>
+                    <td rowspan="1" colspan="1">blue or white</td>
+                    <td rowspan="1" colspan="1">blue</td>
+                    <td rowspan="1" colspan="1">blue</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Style</td>
+                    <td rowspan="1" colspan="1">surpassing the fruit ca. 0.5 mm and surpassing glochids</td>
+                    <td rowspan="1" colspan="1">surpassing the fruit ca. 0.5 mm and surpassing glochids</td>
+                    <td rowspan="1" colspan="1">surpassing the fruit, but not surpassing glochids</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">
+                      Nutlets
+                    </td>
+                    <td rowspan="1" colspan="1">heteromorphic; acute ovoid</td>
+                    <td rowspan="1" colspan="1">heteromorphic; ovoid</td>
+                    <td rowspan="1" colspan="1">heteromorphic; ovoid</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Marginal glochids</td>
+                    <td rowspan="1" colspan="1">two rows; 0.5–1 mm long inner glochids erect</td>
+                    <td rowspan="1" colspan="1">two rows; 1.5 mm long; inner glochids often curved</td>
+                    <td rowspan="1" colspan="1">two rows; 1–1.2 mm long; inner glochids curved</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Disc of nutlets</td>
+                    <td rowspan="1" colspan="1">narrowly ovate-triangular</td>
+                    <td rowspan="1" colspan="1">ovoid</td>
+                    <td rowspan="1" colspan="1">ovoid</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Flowering and fruiting</td>
+                    <td rowspan="1" colspan="1">May to July</td>
+                    <td rowspan="1" colspan="1">June to August</td>
+                    <td rowspan="1" colspan="1">June to July</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1" colspan="1">Elevation</td>
+                    <td rowspan="1" colspan="1">840 m</td>
+                    <td rowspan="1" colspan="1">3700–4200 m</td>
+                    <td rowspan="1" colspan="1">1800–3000 m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </table-wrap>
+          </tp:treatment-sec>
+        </tp:taxon-treatment>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>﻿Acknowledgements</title>
+      <p>We would like to thank Dr. Hafiz Muhammad Wariss for modifying the English and two anonymous reviewers for comments on earlier versions of the manuscript.</p>
+    </ack>
+    <sec sec-type="﻿Additional information" id="SECID0EK4AE">
+      <title>﻿Additional information</title>
+      <sec sec-type="Conflict of interest" id="SECID0EO4AE">
+        <title>Conflict of interest</title>
+        <p>The authors have declared that no competing interests exist.</p>
+      </sec>
+      <sec sec-type="Ethical statement" id="SECID0ET4AE">
+        <title>Ethical statement</title>
+        <p>No ethical statement was reported.</p>
+      </sec>
+      <sec sec-type="Funding" id="SECID0EY4AE">
+        <title>Funding</title>
+        <p>This study was financially supported by the Natural Science Foundation of Xinjiang Uygur Autonomous Region, China (grant no. 2023D01B02), National Natural Science Foundation of China (grant no. 32300183), the Third Xinjiang Scientific Expedition Program (grant no. 2022xjkk1505) and Shanghai Cooperation Organization Partnership and International Technology Cooperation Plan of Science and Technology Projects (grant no. 2023E01018).</p>
+      </sec>
+      <sec sec-type="Author contributions" id="SECID0E44AE">
+        <title>Author contributions</title>
+        <p>Investigation: DHL, XYZ, SJS, JJW. Data curation: DHL, XYZ, SJS, JJW. Formal analysis: DHL, XYZ. Writing-original draft: DHL. Writing-review and editing: DHL, WJL.</p>
+      </sec>
+      <sec sec-type="Author ORCIDs" id="SECID0EC5AE">
+        <title>Author ORCIDs</title>
+        <p>Dan-Hui Liu <ext-link xlink:href="https://orcid.org/0000-0002-0195-1436" ext-link-type="uri" xlink:type="simple">https://orcid.org/0000-0002-0195-1436</ext-link></p>
+        <p>Yi-Xin Zhou <ext-link xlink:href="https://orcid.org/0000-0002-0054-0301" ext-link-type="uri" xlink:type="simple">https://orcid.org/0000-0002-0054-0301</ext-link></p>
+        <p>Shu-Jing Shang <ext-link xlink:href="https://orcid.org/0009-0006-8092-7616" ext-link-type="uri" xlink:type="simple">https://orcid.org/0009-0006-8092-7616</ext-link></p>
+        <p>Jia-Ju Wu <ext-link xlink:href="https://orcid.org/0009-0009-0640-0754" ext-link-type="uri" xlink:type="simple">https://orcid.org/0009-0009-0640-0754</ext-link></p>
+        <p>Wen-Jun Li <ext-link xlink:href="https://orcid.org/0000-0002-2932-0783" ext-link-type="uri" xlink:type="simple">https://orcid.org/0000-0002-2932-0783</ext-link></p>
+      </sec>
+      <sec sec-type="Data availability" id="SECID0EE6AE">
+        <title>Data availability</title>
+        <p>All of the data that support the findings of this study are available in the main text.</p>
+      </sec>
+    </sec>
+    <ref-list>
+      <title>﻿References</title>
+      <ref id="B1">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Brand</surname><given-names>A</given-names></name></person-group> (<year>1931</year>) <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>-<tp:taxon-name><tp:taxon-name-part taxon-name-part-type="subfamily">Boraginoideae</tp:taxon-name-part></tp:taxon-name>-Cryptantheae. In: Engler A (Ed.) Das Pflanzenreich Vol. 4. Leipzig, 236 pp.</mixed-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Candolle</surname><given-names>AP</given-names></name></person-group> (<year>1846</year>) Prodromus Systematis Naturalis Regni Vegetabilis, Vol. 10. Paris, 135–143. <ext-link xlink:href="10.5962/bhl.title.286" ext-link-type="doi" xlink:type="simple">https://doi.org/10.5962/bhl.title.286</ext-link></mixed-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Chukavina</surname><given-names>AP</given-names></name></person-group> (<year>1984</year>) <article-title><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Gilib.</article-title> In: <person-group><name name-style="western"><surname>Chukavina</surname><given-names>AP</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Flora of Tajik SSR, Vol.</issue-title><source>7. Nauka, Leningrad</source>, <fpage>430</fpage>–<lpage>449</lpage>. [in Russian]</mixed-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Davis</surname><given-names>PH</given-names></name><name name-style="western"><surname>Heywood</surname><given-names>VH</given-names></name></person-group> (<year>1963</year>) <source>Principles of angiosperm taxonomy.</source><publisher-name>Van Nostrand</publisher-name>, <publisher-loc>New York</publisher-loc>, <size units="page">556 pp</size>.</mixed-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Goloskokov</surname><given-names>VP</given-names></name></person-group> (<year>1964</year>) <article-title><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Gilib.</article-title> In: <person-group><name name-style="western"><surname>Pavlov</surname><given-names>NV</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Flora of Kazakhstan, Vol.</issue-title><source>7. Academy of Sciences of the Kazakh SSR, Alma-Ata</source>, <fpage>209</fpage>–<lpage>240</lpage>. [in Russian]</mixed-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Gürke</surname><given-names>M</given-names></name></person-group> (<year>1894</year>) <article-title><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Moench.</article-title> In: <person-group><name name-style="western"><surname>Prantl</surname><given-names>K</given-names></name><name name-style="western"><surname>Engler</surname><given-names>A</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Die natürlichen Pflanzenfamilien Engelmann, Vol.</issue-title><source>4. Leipzig</source>, <fpage>106</fpage>–<lpage>107</lpage>.</mixed-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Huang</surname><given-names>JF</given-names></name><name name-style="western"><surname>Zhang</surname><given-names>ML</given-names></name><name name-style="western"><surname>Cohen</surname><given-names>JI</given-names></name></person-group> (<year>2013</year>) <article-title>Phylogenetic analysis of <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Moench (<tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>) based on molecular and morphological data.</article-title><source>Plant Systematics and Evolution</source><volume>299</volume>(<issue>5</issue>): <fpage>913</fpage>–<lpage>926</lpage>. <ext-link xlink:href="10.1007/s00606-013-0772-3" ext-link-type="doi" xlink:type="simple">https://doi.org/10.1007/s00606-013-0772-3</ext-link></mixed-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation xlink:type="simple">IUCN (<year>2022</year>) Guidelines for using the IUCN Red List categories and criteria, version 14. Prepared by the Standards and Petitions Committee. <ext-link xlink:href="https://www.iucnredlist.org/resources/redlistguidelines" ext-link-type="uri" xlink:type="simple">https://www.iucnredlist.org/resources/redlistguidelines</ext-link></mixed-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Khoshsokhan-Mozaffar</surname><given-names>M</given-names></name><name name-style="western"><surname>Sherafati</surname><given-names>M</given-names></name><name name-style="western"><surname>Kazempour-Osaloo</surname><given-names>S</given-names></name></person-group> (<year>2018</year>) Molecular Phylogeny of the Tribe <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="tribe">Rochelieae</tp:taxon-name-part></tp:taxon-name> (<tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="subfamily">Cynoglossoideae</tp:taxon-name-part></tp:taxon-name>) with Special Reference to <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula.</tp:taxon-name-part></tp:taxon-name></italic> Annales Botanici Fennici 55(4–6): 293–308. <ext-link xlink:href="10.5735/085.055.0411" ext-link-type="doi" xlink:type="simple">https://doi.org/10.5735/085.055.0411</ext-link></mixed-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Linnaeus</surname><given-names>C</given-names></name></person-group> (<year>1753</year>) Species Plantarum Vol. 1. Impensis Laurentii Salvii, Stockholm, 131–132.</mixed-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Liu</surname><given-names>DH</given-names></name><name name-style="western"><surname>Xu</surname><given-names>XM</given-names></name><name name-style="western"><surname>He</surname><given-names>Y</given-names></name><name name-style="western"><surname>Liu</surname><given-names>QR</given-names></name></person-group> (<year>2021</year>) <article-title>A new combination in <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Pseudolappula</tp:taxon-name-part></tp:taxon-name></italic> (<tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="tribe">Rochelieae</tp:taxon-name-part></tp:taxon-name>) based on morphological, molecular and palynological evidence.</article-title><source>PhytoKeys</source><volume>187</volume>: <fpage>77</fpage>–<lpage>92</lpage>. <ext-link xlink:href="10.3897/phytokeys.187.75346" ext-link-type="doi" xlink:type="simple">https://doi.org/10.3897/phytokeys.187.75346</ext-link></mixed-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Mallet</surname><given-names>J</given-names></name></person-group> (<year>1995</year>) <article-title>A species definition for the modern synthesis.</article-title><source>Trends in Ecology &amp; Evolution</source><volume>10</volume>(<issue>7</issue>): <fpage>294</fpage>–<lpage>299</lpage>. <ext-link xlink:href="10.1016/0169-5347(95)90031-4" ext-link-type="doi" xlink:type="simple">https://doi.org/10.1016/0169-5347(95)90031-4</ext-link></mixed-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Moench</surname><given-names>C</given-names></name></person-group> (<year>1794</year>) Methodus plantas horti botanici et agri Marburgensis: a staminum situ describendi. Marburgi Cattorum: in officina nova libraria academiae, 416–417. <ext-link xlink:href="10.5962/bhl.title.304" ext-link-type="doi" xlink:type="simple">https://doi.org/10.5962/bhl.title.304</ext-link></mixed-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Nasir</surname><given-names>YJ</given-names></name></person-group> (<year>1989</year>) <source>Family <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boragiaceae</tp:taxon-name-part></tp:taxon-name>. Flora of Pakistan, Vol. 191.</source><publisher-name>University of Karachi</publisher-name>, <publisher-loc>Karachi</publisher-loc>, <size units="page">191 pp</size>.</mixed-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Ovczinnikova</surname><given-names>SV</given-names></name></person-group> (<year>2005</year>) <article-title>The system of the subtribe <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="subtribe">Echinosperminae</tp:taxon-name-part></tp:taxon-name> (tribe <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="tribe">Eritrichieae</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>).</article-title><source>Botanicheskii Zhurnal</source><volume>90</volume>(<issue>8</issue>): <fpage>1153</fpage>–<lpage>1172</lpage>. [In Russian]</mixed-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Ovczinnikova</surname><given-names>SV</given-names></name></person-group> (<year>2009</year>) <article-title>The synopsis of the subtribe <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="subtribe">Echinosperminae</tp:taxon-name-part></tp:taxon-name> Ovczinnikova (<tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>) in the flora of Eurasia.</article-title><source>Novosti sistematiki vysshikh rasteniy</source><volume>41</volume>: <fpage>209</fpage>–<lpage>272</lpage>. <ext-link xlink:href="10.31111/novitates/2010.41.209" ext-link-type="doi" xlink:type="simple">https://doi.org/10.31111/novitates/2010.41.209</ext-link></mixed-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Ovczinnikova</surname><given-names>SV</given-names></name></person-group> (<year>2021</year>) <article-title>A new species <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part> <tp:taxon-name-part taxon-name-part-type="species">botschantzevii</tp:taxon-name-part></tp:taxon-name></italic> (<tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>) from the Northern Africa.</article-title><source>Phytotaxa</source><volume>522</volume>(<issue>1</issue>): <fpage>47</fpage>–<lpage>55</lpage>. <ext-link xlink:href="10.11646/phytotaxa.522.1.5" ext-link-type="doi" xlink:type="simple">https://doi.org/10.11646/phytotaxa.522.1.5</ext-link></mixed-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Popov</surname><given-names>MG</given-names></name></person-group> (<year>1953</year>) <article-title>Family CXXXVIII. <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name> G. Don.</article-title> In: <person-group><name name-style="western"><surname>Shishkin</surname><given-names>BK</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Flora USSR, Vol.</issue-title><source>19. Akademia Nauk, Moscow</source>, <fpage>97</fpage>–<lpage>690</lpage>. [In Russian]</mixed-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Riedl</surname><given-names>H</given-names></name></person-group> (<year>1967</year>) <article-title><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Gilib.</article-title> In: <person-group><name name-style="western"><surname>Rechinger</surname><given-names>KH</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Flora Iranica, Vol.</issue-title><source>48. Akademische Druck-und Verlagsanstalt, Graz, Austria</source>, <fpage>68</fpage>–<lpage>79</lpage>.</mixed-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Sharashova</surname><given-names>VS</given-names></name></person-group> (<year>1962</year>) <article-title><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Gilib.</article-title> In: <person-group><name name-style="western"><surname>Vvedensky</surname><given-names>AI</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Flora of the Kirghiz SSR, Vol.</issue-title><source>10. Academy of Sciences of the Kirghiz SSR, Frunze</source>, <fpage>72</fpage>–<lpage>84</lpage>. [In Russian]</mixed-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Vvedensky</surname><given-names>AI</given-names></name></person-group> (<year>1961</year>) <article-title><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Gilib.</article-title> In: <person-group><name name-style="western"><surname>Vvedensky</surname><given-names>AI</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Flora of Uzbekistan, Vol.</issue-title><source>5. Academy of Sciences of the Uzbek SSR, Tashkent</source>, <fpage>209</fpage>–<lpage>223</lpage>. [In Russian]</mixed-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Wang</surname><given-names>CJ</given-names></name></person-group> (<year>1981</year>) <article-title>A study on the genus <italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> of China.</article-title><source>Bulletin of Botanical Research</source><volume>1</volume>(<issue>4</issue>): <fpage>77</fpage>–<lpage>100</lpage>.</mixed-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Weigend</surname><given-names>M</given-names></name><name name-style="western"><surname>Selvi</surname><given-names>F</given-names></name><name name-style="western"><surname>Thomas</surname><given-names>DC</given-names></name><name name-style="western"><surname>Hilger</surname><given-names>HH</given-names></name></person-group> (<year>2016</year>) <article-title><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Boraginaceae</tp:taxon-name-part></tp:taxon-name>.</article-title> In: <person-group><name name-style="western"><surname>Kadereit</surname><given-names>JW</given-names></name><name name-style="western"><surname>Bittrich</surname><given-names>V</given-names></name></person-group> (<role>Eds</role>) <issue-title>The families and genera of vascular plants, Vol.</issue-title><source>14. Flowering plants: Eudicots; <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Aquifoliales</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Boraginales</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Bruniales</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Dipsacales</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Escalloniales</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Garryales</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Paracryphiales</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="order">Solanales</tp:taxon-name-part></tp:taxon-name> (except <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Convolvulaceae</tp:taxon-name-part></tp:taxon-name>), <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Icacinaceae</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Metteniusaceae</tp:taxon-name-part></tp:taxon-name>, <tp:taxon-name><tp:taxon-name-part taxon-name-part-type="family">Vahliaceae</tp:taxon-name-part></tp:taxon-name>. Cham: Springer International Publishing</source>, <fpage>41</fpage>–<lpage>102</lpage>. <ext-link xlink:href="10.1007/978-3-319-28534-4_5" ext-link-type="doi" xlink:type="simple">https://doi.org/10.1007/978-3-319-28534-4_5</ext-link></mixed-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation xlink:type="simple"><person-group><name name-style="western"><surname>Zhu</surname><given-names>GL</given-names></name><name name-style="western"><surname>Riedl</surname><given-names>H</given-names></name><name name-style="western"><surname>Kamelin</surname><given-names>RV</given-names></name></person-group> (<year>1995</year>) <article-title><italic><tp:taxon-name><tp:taxon-name-part taxon-name-part-type="genus">Lappula</tp:taxon-name-part></tp:taxon-name></italic> Moench.</article-title> In: <person-group><name name-style="western"><surname>Wu</surname><given-names>ZY</given-names></name><name name-style="western"><surname>Raven</surname><given-names>PH</given-names></name></person-group> (<role>Ed.</role>) <issue-title>Flora of China, Vol.</issue-title><source>16. Science Press, Beijing &amp; Missouri Botanical Garden Press, St. Louis</source>, <fpage>401</fpage>–<lpage>413</lpage>.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

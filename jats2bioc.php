@@ -139,6 +139,8 @@ function dive($dom, $node, $passage = null)
 	{
 		$tag_name = '';
 	}
+	
+	// echo "tag_name = $tag_name\n";
 		
 	switch ($tag_name)
 	{		
@@ -146,7 +148,7 @@ function dive($dom, $node, $passage = null)
 			$doc->title_depth++;
 			break;
 		
-		case 'label':
+		//case 'label': // labels can't be passages as they break Pensoft
 		case 'article-title':
 		case 'title':
 		case 'p':
@@ -182,10 +184,8 @@ function dive($dom, $node, $passage = null)
 					break;
 			}
 			
-			$doc->passages[] = $passage;
-			
-			$doc->stack[] = $passage;
-			
+			$doc->passages[] = $passage;			
+			$doc->stack[] = $passage;			
 			$doc->current = $passage;
 			
 			/*
@@ -199,32 +199,105 @@ function dive($dom, $node, $passage = null)
 		// annotations
 		
 		// taxonomic names
-		case 'tp:taxon-name':		
+		case 'tp:taxon-name':	
 			// echo '[' . $count . '] ' . $node->nodeValue . "\n";
 			
-			$annotation = new stdclass;
-			$annotation->text = $node->nodeValue;
-			$annotation->infons = new stdclass;
-			$annotation->infons->type = 'Species';
-			$annotation->locations = array();
+			// These need special treatment as Pensoft can include additional tags
+			// such as object-id which make processing tricky
 			
-			$location = new stdclass;
-			$location->offset = $count;
-			$location->length = mb_strlen($node->nodeValue, mb_detect_encoding($node->nodeValue));
-			$annotation->locations[] = $location;
+			/*
+				<tp:taxon-name><object-id content-type="arpha">3F003351-4A01-5C0A-BDF5-35CC77D4FC5A</object-id>
+				  <tp:taxon-name-part taxon-name-part-type="genus" reg="Lappula">Lappula</tp:taxon-name-part>
+				  <tp:taxon-name-part taxon-name-part-type="species" reg="effusa">effusa</tp:taxon-name-part>
+				  <object-id content-type="ipni" xlink:type="simple">urn:lsid:ipni.org:names77343947-1</object-id>
+				</tp:taxon-name>
+			*/
 			
-			
-			if ($doc->current)
-			{
-				$doc->current->annotations[] = $annotation;
-			}						
+			if (1)
+			{				
+				$taxon_name_parts = array();
+				$start = 0;
+				
+				$children = $node->childNodes;
+				foreach ($children as $child)
+				{
+					switch ($child->nodeName)
+					{
+						// skip over these
+						case 'object-id':
+							$count += mb_strlen($child->nodeValue, mb_detect_encoding($child->nodeValue));
+							$count += 1; // add one for space
+							break;
+							
+						case 'tp:taxon-name-part':
+							//echo ">|" . $child->nodeValue . "|\n";
+							
+							if (trim($child->nodeValue) != '')
+							{
+								if ($start == 0)
+								{
+									$start = $count;								
+								}
+								$taxon_name_parts[] = $child->nodeValue;
+							}
+							break;
+							
+						default:
+							break;
+					}
+				}
+				
+				//echo "start=$start\n";
+				//print_r($a);
+				
+				if (count($taxon_name_parts) > 0)
+				{
+					
+					$taxon_name = join(' ', $taxon_name_parts);
+					
+					$annotation = new stdclass;
+					$annotation->text = $taxon_name;
+					$annotation->infons = new stdclass;
+					$annotation->infons->type = 'Species';
+					$annotation->locations = array();
+					
+					$location = new stdclass;
+					$location->offset = $start;
+					$location->length = mb_strlen($taxon_name, mb_detect_encoding($taxon_name));
+					$annotation->locations[] = $location;
+									
+					if ($doc->current)
+					{
+						$doc->current->annotations[] = $annotation;
+					}
+				}	
+			}
+			else
+			{	
+				// this works for most tp:taxon-name but not those with UUIDs and other 
+				// identifiers				
+				$annotation = new stdclass;
+				$annotation->text = $node->nodeValue;
+				$annotation->infons = new stdclass;
+				$annotation->infons->type = 'Species';
+				$annotation->locations = array();
+				
+				$location = new stdclass;
+				$location->offset = $count;
+				$location->length = mb_strlen($node->nodeValue, mb_detect_encoding($node->nodeValue));
+				$annotation->locations[] = $location;
+								
+				if ($doc->current)
+				{
+					$doc->current->annotations[] = $annotation;
+				}	
+			}					
 			break;
 			
 		// named-content
 		case 'named-content':		
 			// echo '[' . $count . '] ' . $node->nodeValue . "\n";
-			
-			
+						
 			$attributes = array();
 			if ($node->hasAttributes()) 
 			{ 
@@ -248,7 +321,7 @@ function dive($dom, $node, $passage = null)
 				switch ($attributes['content-type'])
 				{
 					// if we have both dwc:verbatimCoordinates and geo-json
-					// we get annotations with an identical span, and that breaks
+					// we get two annotations with an identical span, and that breaks
 					// our ability to render them in HTML
 					case 'dwc:verbatimCoordinates':
 						$type = 'Geo';
@@ -288,8 +361,7 @@ function dive($dom, $node, $passage = null)
 				$location->offset = $count;
 				$location->length = mb_strlen($node->nodeValue, mb_detect_encoding($node->nodeValue));
 				$annotation->locations[] = $location;
-			
-		
+					
 				if ($doc->current)
 				{
 					$doc->current->annotations[] = $annotation;
@@ -341,29 +413,25 @@ function dive($dom, $node, $passage = null)
 			$location->offset = $count;
 			$location->length = mb_strlen($node->nodeValue, mb_detect_encoding($node->nodeValue));
 			$annotation->locations[] = $location;
-			
-		
+					
 			if ($doc->current)
 			{
 				$doc->current->annotations[] = $annotation;
 			}
-			
+			break;	
 						
-			break;			
-			
 		case '#text':
-			// echo '#text=|' . $node->nodeValue . "|\n";
+			//echo '#text=|' . $node->nodeValue . "|\n";
 			if ($doc->current)
 			{
-				$doc->current->text .= $node->nodeValue;
+				$doc->current->text .= $node->nodeValue . ' ';
 				$count += mb_strlen($node->nodeValue, mb_detect_encoding($node->nodeValue));
+				$count += 1;
 			}
 			break;
 						
 		default:
 			break;
-	
-	
 	}
 	
 	// Visit any children of this node
@@ -385,7 +453,7 @@ function dive($dom, $node, $passage = null)
 			$doc->title_depth--;
 			break;
 	
-		case 'label':
+		//case 'label': // labels can't be passages as they break Pensoft
 		case 'article-title':
 		case 'title':
 		case 'p':
@@ -444,7 +512,7 @@ $xml = file_get_contents($filename);
 // load XML and XPATH
 $dom= new DOMDocument;
 $dom->preserveWhiteSpace = true; // need this for tp:name to work
-//$dom->preserveWhiteSpace = false;
+$dom->preserveWhiteSpace = false;
 $dom->loadXML($xml, LIBXML_NOCDATA); // So we get text wrapped in <![CDATA[ ... ]]>
 $xpath = new DOMXPath($dom);
 

@@ -27,7 +27,7 @@
 */
 
 //----------------------------------------------------------------------------------------
-// Tokenis on spaces and punctuation
+// Tokenise on spaces and punctuation
 function tokenise_string($string)
 {
 	$tokens = array();
@@ -54,6 +54,21 @@ function tokenise_string($string)
 			// https://stackoverflow.com/a/72665203/9684
 			$token->pos[0]= mb_strlen(substr($string, 0, $tok[1]), $encoding);
 			
+			// regexp generates " (" as output, which will cause problems so
+			// trim space and adjust position accordingly
+			if (preg_match('/^\s(.)$/', $token->text, $m))
+			{
+				$token->text = $m[1];
+				$token->pos[0]++;
+			}			
+			
+			// regexp generates ") " as output, which will cause problems so
+			// trim space and adjust position accordingly
+			if (preg_match('/^(.)\s$/', $token->text, $m))
+			{
+				$token->text = $m[1];
+			}				
+			
 			$length = mb_strlen($token->text, $encoding);
 			
 			$token->pos[1] = $token->pos[0] + $length;
@@ -75,7 +90,7 @@ if (0)
 	
 	$string = 'Phylogenetic analyses of five chloroplast regions (psbA-trnH, trnL-F, matK, rbcL, and atpB-rbcL; ca. 4.2 kb, 70 accessions) also unambiguously placed Meiogyne kwangtungensis in the Pseuduvaria clade (PP = 1.00, ML BS = 99%).';
 	
-	$string = 'Phylogenetic analysås of fæive ';
+	$string = 'Phylogenetic (analysås PGV) of fæive ';
 	
 	$tokens = tokenise_string($string);
 	
